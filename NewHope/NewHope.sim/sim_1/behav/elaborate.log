@@ -1,0 +1,75 @@
+Vivado Simulator 2015.3
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.3/bin/unwrapped/win64.o/xelab.exe -wto 9a34579609f345ce927ce13932a2420b --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_0 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_4 -L xbip_pipe_v3_0_0 -L xbip_dsp48_macro_v3_0_10 -L secureip --snapshot Test_NewHope_behav xil_defaultlib.Test_NewHope -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-1625] value in initialization depends on signal key [C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/new/trivium_core_rub.vhd:28]
+WARNING: [VRFC 10-1625] value in initialization depends on signal iv [C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/new/trivium_core_rub.vhd:29]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package std.textio
+Compiling package ieee.std_logic_textio
+Compiling package xbip_utils_v3_0_4.xbip_utils_v3_0_4_pkg
+Compiling package xbip_dsp48_macro_v3_0_10.xbip_dsp48_macro_v3_0_10_viv_com...
+Compiling package xbip_dsp48_macro_v3_0_10.xbip_dsp48_macro_v3_0_10_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling architecture behavioral of entity xil_defaultlib.gen_a [\gen_a("11000000000001")(13,0)\]
+Compiling architecture behavioral of entity xil_defaultlib.RegisterFDRE [\RegisterFDRE(1600)\]
+Compiling architecture dataflow of entity xil_defaultlib.theta [theta_default]
+Compiling architecture dataflow of entity xil_defaultlib.rho [rho_default]
+Compiling architecture dataflow of entity xil_defaultlib.pi [pi_default]
+Compiling architecture dataflow of entity xil_defaultlib.chi [chi_default]
+Compiling architecture dataflow of entity xil_defaultlib.iota [iota_default]
+Compiling architecture structural of entity xil_defaultlib.Round [round_default]
+Compiling architecture fsm of entity xil_defaultlib.StateMachine [statemachine_default]
+Compiling architecture structural of entity xil_defaultlib.Keccak1600 [keccak1600_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_0.xbip_pipe_v3_0_0_viv [\xbip_pipe_v3_0_0_viv(0,0,0,0,0,...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(0,0,1,0,"NO_RESET","DIR...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(0,0,1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_0.xbip_pipe_v3_0_0_viv [\xbip_pipe_v3_0_0_viv(0,0,0,0,0,...]
+Compiling architecture synth of entity xbip_pipe_v3_0_0.xbip_pipe_v3_0_0_viv [\xbip_pipe_v3_0_0_viv(0,0,0,0,0,...]
+Compiling architecture synth of entity xbip_pipe_v3_0_0.xbip_pipe_v3_0_0_viv [\xbip_pipe_v3_0_0_viv(0,0,0,0,0,...]
+Compiling architecture synth of entity xbip_dsp48_macro_v3_0_10.xbip_dsp48_macro_synth [\xbip_dsp48_macro_synth(0,0,"art...]
+Compiling architecture synth of entity xbip_dsp48_macro_v3_0_10.xbip_dsp48_macro_v3_0_10_viv [\xbip_dsp48_macro_v3_0_10_viv(0,...]
+Compiling architecture xilinx of entity xbip_dsp48_macro_v3_0_10.xbip_dsp48_macro_v3_0_10 [\xbip_dsp48_macro_v3_0_10(0,0,"a...]
+Compiling architecture xbip_dsp48_macro_0_arch of entity xil_defaultlib.xbip_dsp48_macro_0 [xbip_dsp48_macro_0_default]
+Compiling architecture behav of entity xil_defaultlib.vivado_hls_mod_12289 [vivado_hls_mod_12289_default]
+Compiling architecture behavioral of entity xil_defaultlib.red_12289 [red_12289_default]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_0.blk_mem_gen_v8_3_0_output_stage [\blk_mem_gen_v8_3_0_output_stage...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v8_3_0.blk_mem_gen_v8_3_0_output_stage [\blk_mem_gen_v8_3_0_output_stage...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v8_3_0.blk_mem_gen_v8_3_0_softecc_output_reg_stage [\blk_mem_gen_v8_3_0_softecc_outp...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_0.blk_mem_gen_v8_3_0_mem_module [\blk_mem_gen_v8_3_0_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_0.blk_mem_gen_v8_3_0 [\blk_mem_gen_v8_3_0("blk_mem_gen...]
+Compiling architecture psi_mem_arch of entity xil_defaultlib.psi_mem [psi_mem_default]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_0.blk_mem_gen_v8_3_0_mem_module [\blk_mem_gen_v8_3_0_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_0.blk_mem_gen_v8_3_0 [\blk_mem_gen_v8_3_0("blk_mem_gen...]
+Compiling architecture invpsi_mem_arch of entity xil_defaultlib.invpsi_mem [invpsi_mem_default]
+Compiling architecture behavioral of entity xil_defaultlib.fwd_ntt [\fwd_ntt("11000000000001",1024)(...]
+Compiling architecture behavioral of entity xil_defaultlib.PWMul [\PWMul("11000000000001",1024)(13...]
+Compiling architecture behavioral of entity xil_defaultlib.SubMul [\SubMul("11000000000001",1024,"1...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v8_3_0.blk_mem_gen_v8_3_0_mem_module [\blk_mem_gen_v8_3_0_mem_module("...]
+Compiling architecture behavioral of entity blk_mem_gen_v8_3_0.blk_mem_gen_v8_3_0 [\blk_mem_gen_v8_3_0("blk_mem_gen...]
+Compiling architecture blk_mem_gen_0_arch of entity xil_defaultlib.blk_mem_gen_0 [blk_mem_gen_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.trivium_rub [trivium_rub_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_sample [\bin_sample("11000000000001",16,...]
+Compiling architecture behavioral of entity xil_defaultlib.abs_mod [\abs_mod("011000000000001","0011...]
+Compiling architecture behavioral of entity xil_defaultlib.NewHope_Server [\NewHope_Server("11000000000001"...]
+Compiling architecture behavioral of entity xil_defaultlib.bin_sample [\bin_sample("11000000000001",16,...]
+Compiling architecture behavioral of entity xil_defaultlib.ErrorMessageAdderCompressor [\ErrorMessageAdderCompressor("11...]
+Compiling architecture behavioral of entity xil_defaultlib.NewHope_Client [\NewHope_Client("11000000000001"...]
+Compiling architecture behavioral of entity xil_defaultlib.test_newhope
+Waiting for 1 sub-compilation(s) to finish...
+Built simulation snapshot Test_NewHope_behav

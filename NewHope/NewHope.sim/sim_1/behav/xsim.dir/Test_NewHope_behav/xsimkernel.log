@@ -1,0 +1,7 @@
+Running: xsim.dir/Test_NewHope_behav/xsimk.exe -simmode gui -wdb Test_NewHope_behav.wdb -simrunnum 0 -socket 65040
+Design successfully loaded
+Design Loading Memory Usage: 25140 KB (Peak: 25140 KB)
+Design Loading CPU Usage: 218 ms
+Simulation completed
+Simulation Memory Usage: 29992 KB (Peak: 29992 KB)
+Simulation CPU Usage: 40296 ms

@@ -1,0 +1,354 @@
+#-----------------------------------------------------------
+# Vivado v2015.3 (64-bit)
+# SW Build 1368829 on Mon Sep 28 20:06:43 MDT 2015
+# IP Build 1367837 on Mon Sep 28 08:56:14 MDT 2015
+# Start of session at: Wed Jun 07 11:02:50 2017
+# Process ID: 3336
+# Current directory: C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/xbip_dsp48_macro_0_synth_1
+# Command line: vivado.exe -log xbip_dsp48_macro_0.vds -mode batch -messageDb vivado.pb -notrace -source xbip_dsp48_macro_0.tcl
+# Log file: C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/xbip_dsp48_macro_0_synth_1/xbip_dsp48_macro_0.vds
+# Journal file: C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/xbip_dsp48_macro_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source xbip_dsp48_macro_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.3/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'xbip_dsp48_macro_0' generated file not found 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xbip_dsp48_macro_0' generated file not found 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xbip_dsp48_macro_0' generated file not found 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xbip_dsp48_macro_0' generated file not found 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xbip_dsp48_macro_0' generated file not found 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0_sim_netlist.vhdl'. Please regenerate to continue.
+Command: synth_design -top xbip_dsp48_macro_0 -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2016.11' and will expire in -189 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 302.066 ; gain = 130.813
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'xbip_dsp48_macro_0' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/synth/xbip_dsp48_macro_0.vhd:71]
+INFO: [Synth 8-3491] module 'xbip_dsp48_macro_v3_0_10' declared at 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0.vhd:119' bound to instance 'U0' of component 'xbip_dsp48_macro_v3_0_10' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/synth/xbip_dsp48_macro_0.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'xbip_dsp48_macro_v3_0_10' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0.vhd:239]
+INFO: [Synth 8-3491] module 'xbip_dsp48_macro_v3_0_10_viv' declared at 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:4328' bound to instance 'i_synth' of component 'xbip_dsp48_macro_v3_0_10_viv' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0.vhd:245]
+INFO: [Synth 8-638] synthesizing module 'xbip_dsp48_macro_v3_0_10_viv' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:4460]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:828]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:831]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:834]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:838]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:843]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:847]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:851]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:855]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:858]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:861]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:864]
+INFO: [Synth 8-638] synthesizing module 'xbip_dsp48_macro_synth' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:3233]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:1055]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:3402]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_0_viv' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_0_viv' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized0' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized0' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized1' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized1' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized2' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized2' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized3' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized3' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized4' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized4' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized5' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized5' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized6' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized6' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized7' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized7' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized8' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:593]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd:596]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_0_viv__parameterized8' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'xbip_dsp48e1_wrapper_v3_0' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1659]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1685]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1688]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1691]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1694]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1697]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1700]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1703]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1706]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1709]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1712]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1715]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1718]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1721]
+INFO: [Synth 8-113] binding component instance 'i_primitive' to cell 'DSP48E1' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1896]
+INFO: [Synth 8-256] done synthesizing module 'xbip_dsp48e1_wrapper_v3_0' (2#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1659]
+INFO: [Synth 8-256] done synthesizing module 'xbip_dsp48_macro_synth' (3#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:3233]
+INFO: [Synth 8-256] done synthesizing module 'xbip_dsp48_macro_v3_0_10_viv' (4#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:4460]
+INFO: [Synth 8-256] done synthesizing module 'xbip_dsp48_macro_v3_0_10' (5#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0.vhd:239]
+INFO: [Synth 8-256] done synthesizing module 'xbip_dsp48_macro_0' (6#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/synth/xbip_dsp48_macro_0.vhd:71]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 342.270 ; gain = 171.016
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 342.270 ; gain = 171.016
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/xbip_dsp48_macro_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/xbip_dsp48_macro_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 539.281 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 539.281 ; gain = 368.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 539.281 ; gain = 368.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 539.281 ; gain = 368.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 539.281 ; gain = 368.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 539.281 ; gain = 368.027
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 539.281 ; gain = 368.027
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 539.281 ; gain = 368.027
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 539.281 ; gain = 368.027
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 539.281 ; gain = 368.027
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 628.266 ; gain = 457.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 629.148 ; gain = 457.895
+---------------------------------------------------------------------------------
+Finished Parallel Timing Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 629.148 ; gain = 457.895
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 629.148 ; gain = 457.895
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 638.852 ; gain = 467.598
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 638.852 ; gain = 467.598
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 638.852 ; gain = 467.598
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 638.852 ; gain = 467.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 638.852 ; gain = 467.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 638.852 ; gain = 467.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 638.852 ; gain = 467.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |     1|
+|2     |LUT1    |     1|
+|3     |LUT2    |     3|
+|4     |LUT3    |    15|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 638.852 ; gain = 467.598
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 638.852 ; gain = 211.941
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 638.852 ; gain = 467.598
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/xbip_dsp48_macro_0_ooc.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 638.852 ; gain = 416.426
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 638.852 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 07 11:03:36 2017...

@@ -1,0 +1,944 @@
+#-----------------------------------------------------------
+# Vivado v2015.3 (64-bit)
+# SW Build 1368829 on Mon Sep 28 20:06:43 MDT 2015
+# IP Build 1367837 on Mon Sep 28 08:56:14 MDT 2015
+# Start of session at: Mon Apr 03 10:14:22 2017
+# Process ID: 4484
+# Current directory: C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/invpsi_mem_synth_1
+# Command line: vivado.exe -log invpsi_mem.vds -mode batch -messageDb vivado.pb -notrace -source invpsi_mem.tcl
+# Log file: C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/invpsi_mem_synth_1/invpsi_mem.vds
+# Journal file: C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/invpsi_mem_synth_1\vivado.jou
+#-----------------------------------------------------------
+source invpsi_mem.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.3/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'invpsi_mem' generated file not found 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/invpsi_mem.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'invpsi_mem' generated file not found 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/invpsi_mem_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'invpsi_mem' generated file not found 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/invpsi_mem_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'invpsi_mem' generated file not found 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/invpsi_mem_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'invpsi_mem' generated file not found 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/invpsi_mem_sim_netlist.vhdl'. Please regenerate to continue.
+Command: synth_design -top invpsi_mem -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2016.11' and will expire in -124 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 328.547 ; gain = 156.789
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'invpsi_mem' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/synth/invpsi_mem.vhd:68]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: invpsi_mem.mif - type: string 
+	Parameter C_INIT_FILE bound to: invpsi_mem.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.3132 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_3_0' declared at 'c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3.vhd:133' bound to instance 'U0' of component 'blk_mem_gen_v8_3_0' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/synth/invpsi_mem.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_3_0' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3.vhd:277]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: invpsi_mem.mif - type: string 
+	Parameter C_INIT_FILE bound to: invpsi_mem.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.3132 mW - type: string 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_3_0_synth' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193780]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: invpsi_mem.mif - type: string 
+	Parameter C_INIT_FILE bound to: invpsi_mem.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_RST_TYPE bound to: sync - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:192741]
+	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter C_FAMILY bound to: virtex6 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_ALGORITHM_i bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE_i bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: invpsi_mem.mif - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_RST_TYPE bound to: sync - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA_ALGO bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA_i bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB_ALGO bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB_i bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:4803]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187182]
+	Parameter C_FAMILY bound to: virtex6 - type: string 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RSTA_WIDTH bound to: 2 - type: integer 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_REGCEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WEA_I_WIDTH bound to: 2 - type: integer 
+	Parameter C_WRITE_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_WRITE_WIDTH_A_CORE bound to: 14 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 10 - type: integer 
+	Parameter C_ADDRA_WIDTH_CORE bound to: 10 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RSTB_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_REGCEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WEB_I_WIDTH bound to: 2 - type: integer 
+	Parameter C_WRITE_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_WRITE_WIDTH_B_CORE bound to: 14 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
+	Parameter C_ADDRB_WIDTH_CORE bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES_A bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES_B bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_input_block' (1#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187182]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193270]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193274]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193278]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193282]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193296]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:184458]
+	Parameter C_FAMILY bound to: virtex6 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_PRIM_TYPE_i bound to: 1 - type: integer 
+	Parameter C_USER_WIDTH bound to: 14 - type: integer 
+	Parameter C_USER_DEPTH bound to: 1024 - type: integer 
+	Parameter C_TOTAL_PRIMS bound to: 1 - type: integer 
+	Parameter C_DEPTH_RESOLUTION bound to: 1024 - type: integer 
+	Parameter C_START_WIDTH bound to: 320000'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000... (message truncated)
+	Parameter C_START_DEPTH bound to: 320000'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000... (message truncated)
+	Parameter C_PRIM_WIDTH bound to: 320000'b0000000000000000000000000001001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000... (message truncated)
+	Parameter C_PRIM_DEPTH bound to: 320000'b0000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000... (message truncated)
+	Parameter C_USED_WIDTH bound to: 320000'b0000000000000000000000000000111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000... (message truncated)
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: invpsi_mem.mif - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_RST_TYPE bound to: sync - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RSTA_WIDTH bound to: 2 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_REGCEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA_i bound to: 0 - type: integer 
+	Parameter C_WE_WIDTH_A bound to: 2 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_RATIO_WA bound to: 1 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_RATIO_RA bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_A bound to: 10 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RSTB_WIDTH bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_REGCEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB_i bound to: 0 - type: integer 
+	Parameter C_WE_WIDTH_B bound to: 2 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_RATIO_WB bound to: 1 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_RATIO_RB bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_B bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES_A bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_READ bound to: 0 - type: bool 
+	Parameter C_EN_ECC_WRITE bound to: 0 - type: bool 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: bool 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: bool 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:182885]
+	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter C_FAMILY bound to: virtex6 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_USER_WIDTH bound to: 14 - type: integer 
+	Parameter C_USER_DEPTH bound to: 1024 - type: integer 
+	Parameter C_START_WIDTH bound to: 0 - type: integer 
+	Parameter C_START_DEPTH bound to: 0 - type: integer 
+	Parameter C_PRIM_WIDTH bound to: 18 - type: integer 
+	Parameter C_PRIM_DEPTH bound to: 1024 - type: integer 
+	Parameter C_USED_WIDTH bound to: 14 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: invpsi_mem.mif - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_RST_TYPE bound to: sync - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 14'b00000000000000 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_RATIO_WA bound to: 1 - type: integer 
+	Parameter C_RATIO_RA bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_A bound to: 10 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 14'b00000000000000 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_RATIO_WB bound to: 1 - type: integer 
+	Parameter C_RATIO_RB bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_B bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_EN_ECC_READ bound to: 0 - type: bool 
+	Parameter C_EN_ECC_WRITE bound to: 0 - type: bool 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: bool 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: bool 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_MEM_ADDR_WIDTH_A bound to: 10 - type: integer 
+	Parameter C_MEM_ADDR_WIDTH_B bound to: 10 - type: integer 
+	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183567]
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183568]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:96243]
+	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_USER_WIDTH bound to: 14 - type: integer 
+	Parameter C_USER_DEPTH bound to: 1024 - type: integer 
+	Parameter C_START_WIDTH bound to: 0 - type: integer 
+	Parameter C_START_DEPTH bound to: 0 - type: integer 
+	Parameter C_PRIM_WIDTH bound to: 18 - type: integer 
+	Parameter C_PRIM_DEPTH bound to: 1024 - type: integer 
+	Parameter C_USED_WIDTH bound to: 14 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: invpsi_mem.mif - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_USE_BYTE_WE bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_SSRA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_SINITA_VAL bound to: 18'b000000000000000000 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 18 - type: integer 
+	Parameter C_RATIO_WA bound to: 1 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 18 - type: integer 
+	Parameter C_RATIO_RA bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_A bound to: 10 - type: integer 
+	Parameter C_HAS_SSRB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_SINITB_VAL bound to: 18'b000000000000000000 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 18 - type: integer 
+	Parameter C_RATIO_WB bound to: 1 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 18 - type: integer 
+	Parameter C_RATIO_RB bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH_B bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_EN_ECC_READ bound to: 0 - type: bool 
+	Parameter C_EN_ECC_WRITE bound to: 0 - type: bool 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: bool 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: bool 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_MEM_ADDR_WIDTH_A bound to: 10 - type: integer 
+	Parameter C_MEM_ADDR_WIDTH_B bound to: 10 - type: integer 
+	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
+INFO: [Synth 8-3919] null assignment ignored [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:101760]
+	Parameter DOA_REG bound to: 1 - type: integer 
+	Parameter DOB_REG bound to: 0 - type: integer 
+	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_00 bound to: 256'b0100010000101011000110110011000000010011011100010100001101011100000011000110111001010110010001010100011100000110001100100001110100001010000110010101101000101111001100110001100100100000001001100010100000011010010000000011011000001011010001110000000000000001 
+	Parameter INIT_01 bound to: 256'b0010010101010101010010110011001000010100010000010000011100110101000001000011001100010111000111110001011100111110000101010011100000110011001000010010001101101111001110000110001000110010001111010001101000000000001011010001000100100110011100100101010100111010 
+	Parameter INIT_02 bound to: 256'b0100011101101110000000000101000100100001011000000000011101101000000101110001001100100110001000000001011101101011010011010100001100001001000110010010000100011111000011000110001100010101010100000000000100001100000011100011110100100100000000110000010101010110 
+	Parameter INIT_03 bound to: 256'b0100110101110010000010010001001000000111001110110000011000010110000110010000000101001000001110110011100000100011000010100010111000111010000100110001010100111011000110000011111101000011000000010011101000111100000110110110000100001000001001100001000101110110 
+	Parameter INIT_04 bound to: 256'b0000011100111001000111010010010001011001010001100011001001111010010011000101010101011111000010110100111001101100001001110100101101000001000101000001100101100000001111010001110101001101001001010010001000000010010111100111111101001001011011000010100101111110 
+	Parameter INIT_05 bound to: 256'b0001011000011010010111000010000101011000000000110101111101111000000100110010010001011101001011100011001001100010010110110110000100001101000010010011111001001011001010010101001100100110011111010010000001010001000111000000000001010101000111000001001101011101 
+	Parameter INIT_06 bound to: 256'b0001110001101110001010000011101100001101010111110001110001111011010001010100101100000010011000110001001101110100001000010000011101000011010011000100010001111110010111100111000000101011001001100001010100101011000111100101110000100110000110100010111000010111 
+	Parameter INIT_07 bound to: 256'b0101011000010101001111010101110100111011011010010010110001111011010011010000011101011101001100110101010001101101010100100110000101010000001001000001100101011001010110100010100001000110010110000100100101000000010001100010110100100111011001000001000000101001 
+	Parameter INIT_08 bound to: 256'b0001001001011111000110100100100000101000010001110001100001000000000101110011100001011010011000100100100000111001010111100000111000101011001101110101110001011101000100010000001001010011011110010100000001110000001110010101100001000100001101100101110000100101 
+	Parameter INIT_09 bound to: 256'b0001100100101111000101000111111000011111000010100001011100011001000100100100001001001001010100000011011000101101010001000100101101010011001000110001000001001110001101010110001001000111000011110000100100000001000101100100010000010001010010010001111101010000 
+	Parameter INIT_0A bound to: 256'b0100010101011101010100100110100001000000001010000001100101000111000101100001111100100010001111100100111100000011001111010110110100100111001100100001001000000001010000000010110001001011001011000011011100110110000101010101110000100110000111110101010000110101 
+	Parameter INIT_0B bound to: 256'b0100111100001011010000010011011000000000011100010010011000110111000000010010000001000111001101000000000000000011001111010010110001000011010011010011100100110111001101100101011001001010011100010000101100010010001001000010111001010011000000100000110101110001 
+	Parameter INIT_0C bound to: 256'b0000100000101001010011110010001000000011000101000010010000100101010101100111000100110110011001000000100100110111010001100101000101011100000101000010000000000000001010100100010001001101001101000010000101110001000000110011001101010101000111110101000100001001 
+	Parameter INIT_0D bound to: 256'b0101100000010111001110000110111000111000001000010010000100111100001001100111000000001100010001110001110101000100000001100110101100010011000001010100001101000011001100000111101101001000010101100001010000000110000100010000101100101111000101110001001001110110 
+	Parameter INIT_0E bound to: 256'b0101100000001000001001100001010101010011001000010010011101011100010111110110011000010111011110100001110100110011000010110010000001010100000000000101111000001111001110110001011100100000001011110001010001110110010000110000100100111000011001100000010000100001 
+	Parameter INIT_0F bound to: 256'b0100110100100000010111000100011100100111011011010000100000101011010111000111101101011001011111000001110101111001010000100011111101011101000111110011101000000100000101100110000000110011001111110011100001101101000100110011000101001001010101100000100000010101 
+	Parameter INIT_10 bound to: 256'b0011011000100110001101010011101101000011000000110011000000110100010111000010110100011111000101000101110101000101000000100111111000001111011100010001111100011110010000010101101001010000011111110000101001001111001010100011101101011000001101000000100101100110 
+	Parameter INIT_11 bound to: 256'b0101101001110011010001000001010001010010010110110101000000111110001010110001100100110111001010110100011100000010000000000011100000110000000010010010110101100110001010100010011100011100001110110011100100101101001011110111100101011100011100010000110101000000 
+	Parameter INIT_12 bound to: 256'b0011100000101010000110010011111001001111000010000000010000001010001000010110010000111001010011010001111101101011001101100011111000001001011111100001001000101000010100000100110000101011010001100001101100111010000010000001000100110001010111000000011101111010 
+	Parameter INIT_13 bound to: 256'b0010001001110011001001010011010100101011001000010011101001110100001111010010000000101010010100000000000100010011000111010100110100110000000110110001110101101010010101100101101100010100011110110100000101101101001101010011110000100011001110000000100000011010 
+	Parameter INIT_14 bound to: 256'b0001011101010101001010110101101000111010010100110011001000000011001000000111010101011100000010010100111000000011000001000101110100000011001001010001111101110000010000110110111100110000010011010001110000010000010001100100001000110000010001000010010000010000 
+	Parameter INIT_15 bound to: 256'b0000000000111010000000010111000101000100001101010000011101101011010100000101110100100111000100010000011001110101001011100111100001000100011011000010110000110001010111100111001100001000010100010001011000011100010001010001001100000111010011110011111100001101 
+	Parameter INIT_16 bound to: 256'b0101101001011100001011010111001000101111001001110001101000001000010101010101011000010101010011100000000000110100010001110001101101010011010101100000001100101111000100110100100100110001011011110100000100001100000101100001011101011110011010100001000001001111 
+	Parameter INIT_17 bound to: 256'b0010100001111001000101100110100000100000010010010001100000110111001010100101110001011000000011110001101100011010010110010110111000111000010000000011101100100111001110100101010100011010011101010000000101000000010101010101100000111001010100010001000000000001 
+	Parameter INIT_18 bound to: 256'b0100110001100110010110100101011001000011001110010000000001000000000011000001111000110010011010110001011100000100000100110100011100011000001100110000110101010011000101110110111000101010011011100010001001010001001011100001111101000010000001110010100100001001 
+	Parameter INIT_19 bound to: 256'b0001111101101111000010000010001001011000011001110101110001001000010100000101101100111110000111110101011100101001010011110110001101000000001100110101101000111100000110000100111001010101010110100011111001110001000110110111001000101111001100010000011001000011 
+	Parameter INIT_1A bound to: 256'b0100011000000000001111100011011100000001001010000100101001111101001100010011100000100111011100100000111100101010010100110100011100101111011010100001001101111011001010000100000000001001001100000101010100110001010000010000110100101111011001110011011001010000 
+	Parameter INIT_1B bound to: 256'b0101110101011010001100000010111000110010011110110101101001110101000111110011000001000000000101000001110100110010000101100110011101011101001111000000101001111100000010000111101000000111001101000011000100011011010101100111101000011101000100000001111101010001 
+	Parameter INIT_1C bound to: 256'b0100000001101010000111110000000100010101010011110101111001100101010011100001100000110010000011010000111101101111001101100010110001000010010001010101110001011111001100010110110100000011010001010011010101001100001001010010011000100101000000010101010101110100 
+	Parameter INIT_1D bound to: 256'b0100100000101011001111110110111001001101010010000000111000110011010010010010010101011110001001110100010100010111000110110100100101000001000001100101101101000001001100000000001100010011000011110101000001011111000100000000001100010110010000100000111000001101 
+	Parameter INIT_1E bound to: 256'b0001010100110010001011010110110000101100011001110100101100100010000101110100000101010010011001000101111001010011010110100010111000001111001101110001110100101101010111010010011001001001000101000001100101110011000000110010101001010001001111110011101001101111 
+	Parameter INIT_1F bound to: 256'b0101111101010000010101100001001000110001011001100101010000110110000100110100010000001011010100010000110000101111001011100011011001010100000110010101110100100011000011100001011100110101011110100011011000001000000100000000100100011001000000100011110001110100 
+	Parameter INIT_20 bound to: 256'b0101110000000111010101100001101001010101000100010011001001101001010001100011010100011010000010100100111001011101000101000111001000001111000101100001101001010000010010110111001001010110011101000100101000101001000010010001101000101010011001100100010001001010 
+	Parameter INIT_21 bound to: 256'b0011110000011111010111010000100000000010011101110101001100101101000011100010110000000011001010010001000100001001000000110000100000110000001111000010000001000111000010000000111000000111000110110001000100110111001011110100110001001010000100010101111001000000 
+	Parameter INIT_22 bound to: 256'b0000101000100010010100100011000101001001001100110001110001000110001011000011101000010011000101110001111001101011010111010010111101000101011100100010000000010111010101000000111100010000011001110000000000010100001110000111011100111100000000010011011101010110 
+	Parameter INIT_23 bound to: 256'b0011010000100011010001010111000100001110011001000001110000101000001011000101110000001010001011010000100000000101000011110001100100110001001110100001000001100100000111100111011100110010010111000100110001110111010101100010000100111000000001100011100100110110 
+	Parameter INIT_24 bound to: 256'b0100010101010010000100010111001100011010010000010011111000010010001001100011000101000100001110010100001000010000001000010000101100010111000000110001111100001110010110110000010100110100000110000000010001101110000011010100100100110011010110010011110001101110 
+	Parameter INIT_25 bound to: 256'b0000001100010110000011010001011101011110011011110011011001101101010101010000011001010001011101010011000000110011001010000100010100000001011011110001011001010100010110000001111100111100001101110011101101000011000001000000000000110101001010010011100101010111 
+	Parameter INIT_26 bound to: 256'b0011101001111110001000010001101100101011000011100101011000110111000101110101010000110111001000010000001001101100000100100011100000001001010101000001011101001001001010000111111000111101000001100100011101010000001110110010000001010111011000000001010000101000 
+	Parameter INIT_27 bound to: 256'b0101111001001101001111110101011100100011011111010100101100000000000010110000000100101000011000110101111000110101001101000111110000001011001111000001111100001101000110100100111101011100001100100000101001000000000101110110001000010011001100110001000000000110 
+	Parameter INIT_28 bound to: 256'b0011100101000101001110100101010001011000000010110000001101000000010101010101001001000011011010100100000100011011001010000111000001001010011001000101111101000101010001110000000100001011011111110011001000110101001000110101011001001110001011010101111100111101 
+	Parameter INIT_29 bound to: 256'b0001111100000111001110010110111000101101010010110100011101110010010101000111100000110011010101010010001100011001010011100011000001000010011000010011100100011110010011000010000100010111011100000011100000010011000000110001110000101011010101000010110101010101 
+	Parameter INIT_2A bound to: 256'b0000100101111011001101000111110100001001000110000010110001100110001110100000010101010111000111000000101100100101000010000110101100101110011000110010101101011100010110110011111001000001010100000001010101010001010001110101011100101110010011100101111000101101 
+	Parameter INIT_2B bound to: 256'b0100111101110000001100100011111101000100010110100011110000101101000110110100111001000001000010000000110101011100001111110101000001001110000111100100110001100100001111100101011000110011011011000011100000111010001000000101000000001011011011100001110100110101 
+	Parameter INIT_2C bound to: 256'b0100010101100010000110010000010100110111001010000101011100111101010000110010001100111110010110000000111100001000010111000011000101010001010111110100100100010011001111000111100000011000011000110101011100010001010001010000100001000011000001010001100100100110 
+	Parameter INIT_2D bound to: 256'b0001101000101000001111100111111000111110011100110000010001100100001000000111111001010100000010110000010000011100000000000111110101000111001001100100000001000001001100000001001000100101011010000101010100010100000100000001010000111101010011010000001001011010 
+	Parameter INIT_2E bound to: 256'b0011010101011101001000000111000100011001010011100010111001101001010001000100011000000011001101100101011000111111001110000011110000001100000000000000110100111001010011010000010000100000000001110101010100100100000101110010011001011010001101000001110000000101 
+	Parameter INIT_2F bound to: 256'b0101110100101010000110100111100000111100010001110000111001110100001010000101101101010001001101110101011001001001001001000111011100001101001010010100110001101111000000110010000001011001010100110101101000110101000100000011111001001111000011010010101000101000 
+	Parameter INIT_30 bound to: 256'b0010001100011000010110010111011101011011011011110100101100111111010001000000011100111011001010000001101100001010010100100101110000001111011111100100100100000101000101110000110100001011010010010100011000001100000100110110010001011110011101100100010101111101 
+	Parameter INIT_31 bound to: 256'b0101000101001000001100100111000100011001010001000100001000101110001000010100110100100011001010110101110000111000000000000000100000000110011011110001010000100001010110000010101100010001011001000011111100000111001111010101101100011010011111100001110100101110 
+	Parameter INIT_32 bound to: 256'b0000100000000110000000110101001001000010000101000101001001110000001110110101100000110001001100000100100100010000001100000111011101010011010111000001111000000110010000100011000000101111001011110000001101110110001110000000001101001011010101110000111001101101 
+	Parameter INIT_33 bound to: 256'b0100100101001000010010010111011000000110000101110100110001111111000010000110000000010011011001110000000000010101001011010011000001011001000101110001000101111101010111100101011100101100000100100100110101111110001111100100000000000101000010000000000100010110 
+	Parameter INIT_34 bound to: 256'b0011101000011111010010100110100100010110000011000011111000000001001000000001000101011111001110010100001000000001000011100011001001000101000001100001111101111110000010010101100100111101011001110010110100010101000101110110010100010100010100110101011100111010 
+	Parameter INIT_35 bound to: 256'b0010100100011011000011010111111000001001011000110010101000100010010100000000111001010111011100010000111001011010001011110110110100100101001000100101100001010001001101100101101000011100010101010010110000101001000101110100110000101010000111100010010000111001 
+	Parameter INIT_36 bound to: 256'b0010100000110010010010110001000100000110011000010101011000000010010111100100010001000111010101010000110101100011010011100110000000001011011110100101001001100011000111100001110100100010010001110011001000111001010101010011101100001101010001100001110101100111 
+	Parameter INIT_37 bound to: 256'b0011110001011011010001110110101101010110011110010011101000101101010010100101011100110101010111100001000101001101010100010011010101001100010100110001011000011000001111110001111101001000001101100000110101110111001001110101011000100011010101010011100100010011 
+	Parameter INIT_38 bound to: 256'b0011010000001111000011000111101000110010011001000100010001010011001110000100111001011001010001110100011101101111010101010000101101001000000010000101010000011111001011000100011100111100011111100010111000001100010110000111001100100100011011110000010101101111 
+	Parameter INIT_39 bound to: 256'b0011101100110101010001010110000100101000000011110101111101000010001001100111101101001101001111000100001100101011010000100010000101011011001111110011011000001001000000110100001001010000011010010010010000110101000000110111111000010100001111100010101000001010 
+	Parameter INIT_3A bound to: 256'b0000101000000000010110110001101100000000000110000000101001011011000001110000100000010011001101010010101100101011001001110010111101011001000100000000001001101101010110000000101000001111000001110011010100101100000101110000001001001011001101000010001100011110 
+	Parameter INIT_3B bound to: 256'b0001101100001101001100000000011100100010010110110001101001011010001110110010110001001101010111110001000101110101000000110010000101010001011101110101001101101110001110000001001000001110011000110010001000111011000011000011011001010110001110100001001000011110 
+	Parameter INIT_3C bound to: 256'b0001011001111101000001000011011100101100000111100011011001011000010000100000010001001011010111100100011001101100001111100101000001000000001011110010100001010111010110010011010100110111001011110000011101010100000001010010101000111100000100110010011101011010 
+	Parameter INIT_3D bound to: 256'b0100000100011001001111110111111000110100000111010010101100011010010011110000011000011011000110000000100101110001010010000100001000010111000000010011011000011100010010110011100001010101000000110001100100100000000000100010010100111010000010100001110100111001 
+	Parameter INIT_3E bound to: 256'b0100011101010001001011110101100100101111010001100011001101110011000111100110010101000010010110000100010000110001001101100000011101000110011001000011101100000111000011010010101001000001001010000101010101111111000110110111010001010000000111000001011000010000 
+	Parameter INIT_3F bound to: 256'b0101111101111010010100000111000101011001001101000100001001110110010001110010111100111000010000110100011000101100001000100000100001011110001010010101111101001111001010110001011001011010000000000101101000000010000111010101110100010001001001010011111101001000 
+	Parameter INIT_A bound to: 18'b000000000000000000 
+	Parameter INIT_B bound to: 20'b00000000000000000000 
+	Parameter INIT_FILE bound to: NONE - type: string 
+	Parameter IS_CLKARDCLK_INVERTED bound to: 1'b0 
+	Parameter IS_CLKBWRCLK_INVERTED bound to: 1'b0 
+	Parameter IS_ENARDEN_INVERTED bound to: 1'b0 
+	Parameter IS_ENBWREN_INVERTED bound to: 1'b0 
+	Parameter IS_RSTRAMARSTRAM_INVERTED bound to: 1'b0 
+	Parameter IS_RSTRAMB_INVERTED bound to: 1'b0 
+	Parameter IS_RSTREGARSTREG_INVERTED bound to: 1'b0 
+	Parameter IS_RSTREGB_INVERTED bound to: 1'b0 
+	Parameter RAM_MODE bound to: TDP - type: string 
+	Parameter RDADDR_COLLISION_HWCONFIG bound to: PERFORMANCE - type: string 
+	Parameter READ_WIDTH_A bound to: 18 - type: integer 
+	Parameter READ_WIDTH_B bound to: 18 - type: integer 
+	Parameter RSTREG_PRIORITY_A bound to: REGCE - type: string 
+	Parameter RSTREG_PRIORITY_B bound to: REGCE - type: string 
+	Parameter SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter SRVAL_A bound to: 18'b000000000000000000 
+	Parameter SRVAL_B bound to: 20'b00000000000000000000 
+	Parameter WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_WIDTH_A bound to: 18 - type: integer 
+	Parameter WRITE_WIDTH_B bound to: 18 - type: integer 
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB18E1' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:101822]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init' (2#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:96243]
+WARNING: [Synth 8-3848] Net RSTA_BUSY in module/entity blk_mem_gen_prim_width does not have driver. [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:182740]
+WARNING: [Synth 8-3848] Net RSTB_BUSY in module/entity blk_mem_gen_prim_width does not have driver. [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:182741]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (3#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:182885]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:185950]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:186103]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (4#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:184458]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187787]
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_WRITE_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_A_CORE bound to: 14 - type: integer 
+	Parameter C_READ_WIDTH_B_CORE bound to: 14 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (5#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:187787]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (6#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:192741]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_3_0_synth' (7#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:193780]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_3_0' (8#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3.vhd:277]
+INFO: [Synth 8-256] done synthesizing module 'invpsi_mem' (9#1) [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/synth/invpsi_mem.vhd:68]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 497.984 ; gain = 326.227
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINA[17] to constant 0 [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183929]
+INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINA[16] to constant 0 [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183929]
+INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINA[8] to constant 0 [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183929]
+INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINA[7] to constant 0 [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183929]
+INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINB[17] to constant 0 [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183929]
+INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINB[16] to constant 0 [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183929]
+INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINB[8] to constant 0 [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183929]
+INFO: [Synth 8-3295] tying undriven pin \prim_init.ram :DINB[7] to constant 0 [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/blk_mem_gen_v8_3_0/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183929]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 497.984 ; gain = 326.227
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/invpsi_mem_ooc.xdc]
+Finished Parsing XDC File [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/invpsi_mem_ooc.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 543.074 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:46 ; elapsed = 00:01:51 . Memory (MB): peak = 543.074 ; gain = 371.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:46 ; elapsed = 00:01:51 . Memory (MB): peak = 543.074 ; gain = 371.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:46 ; elapsed = 00:01:51 . Memory (MB): peak = 543.074 ; gain = 371.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:46 ; elapsed = 00:01:51 . Memory (MB): peak = 543.074 ; gain = 371.316
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 543.074 ; gain = 371.316
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 543.074 ; gain = 371.316
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 543.074 ; gain = 371.316
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 543.074 ; gain = 371.316
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:46 ; elapsed = 00:01:52 . Memory (MB): peak = 543.074 ; gain = 371.316
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:59 ; elapsed = 00:02:04 . Memory (MB): peak = 581.391 ; gain = 409.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:59 ; elapsed = 00:02:04 . Memory (MB): peak = 581.391 ; gain = 409.633
+---------------------------------------------------------------------------------
+Finished Parallel Timing Optimization  : Time (s): cpu = 00:01:59 ; elapsed = 00:02:04 . Memory (MB): peak = 581.391 ; gain = 409.633
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:59 ; elapsed = 00:02:04 . Memory (MB): peak = 581.391 ; gain = 409.633
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:59 ; elapsed = 00:02:04 . Memory (MB): peak = 591.090 ; gain = 419.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:59 ; elapsed = 00:02:05 . Memory (MB): peak = 591.090 ; gain = 419.332
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:59 ; elapsed = 00:02:05 . Memory (MB): peak = 591.090 ; gain = 419.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:59 ; elapsed = 00:02:05 . Memory (MB): peak = 591.090 ; gain = 419.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:59 ; elapsed = 00:02:05 . Memory (MB): peak = 591.090 ; gain = 419.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 591.090 ; gain = 419.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 591.090 ; gain = 419.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |RAMB18E1 |     1|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------------------------------+------------------------------+------+
+|      |Instance                              |Module                        |Cells |
++------+--------------------------------------+------------------------------+------+
+|1     |top                                   |                              |     1|
+|2     |  U0                                  |blk_mem_gen_v8_3_0            |     1|
+|3     |    inst_blk_mem_gen                  |blk_mem_gen_v8_3_0_synth      |     1|
+|4     |      \gnativebmg.native_blk_mem_gen  |blk_mem_gen_top               |     1|
+|5     |        \valid.cstr                   |blk_mem_gen_generic_cstr      |     1|
+|6     |          \ramloop[0].ram.r           |blk_mem_gen_prim_width        |     1|
+|7     |            \prim_init.ram            |blk_mem_gen_prim_wrapper_init |     1|
++------+--------------------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 591.090 ; gain = 419.332
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:01:55 . Memory (MB): peak = 591.090 ; gain = 301.840
+Synthesis Optimization Complete : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 591.090 ; gain = 419.332
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/invpsi_mem_ooc.xdc]
+Finished Parsing XDC File [c:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.srcs/sources_1/ip/invpsi_mem/invpsi_mem_ooc.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:58 ; elapsed = 00:02:02 . Memory (MB): peak = 591.090 ; gain = 346.930
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 591.090 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 03 10:16:30 2017...

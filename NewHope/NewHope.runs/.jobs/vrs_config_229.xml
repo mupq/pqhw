@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="blk_mem_gen_0_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/blk_mem_gen_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="xbip_dsp48_macro_0_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/xbip_dsp48_macro_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="psi_mem_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/psi_mem_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="invpsi_mem_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/invpsi_mem_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="rlwe_p_mem_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/rlwe_p_mem_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="rlwe_a_mem_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/rlwe_a_mem_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="rlwe_r2_mem_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/rlwe_r2_mem_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM8x1024_low_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/ROM8x1024_low_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM8x1024_invpsi_high_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/ROM8x1024_invpsi_high_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM8x1024_psi_low_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/ROM8x1024_psi_low_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM8x1024_psi_high_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/ROM8x1024_psi_high_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM8x1024_a_low_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/ROM8x1024_a_low_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM8x1024_a_high_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/ROM8x1024_a_high_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM8x1024_p_low_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/ROM8x1024_p_low_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM8x1024_p_high_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/ROM8x1024_p_high_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM8x1024_r2_low_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/ROM8x1024_r2_low_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM8x1024_r2_high_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/ROM8x1024_r2_high_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Register_RAM_synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/Register_RAM_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="blk_mem_gen_0_synth_1"/>
+		<Parent Id="xbip_dsp48_macro_0_synth_1"/>
+		<Parent Id="psi_mem_synth_1"/>
+		<Parent Id="invpsi_mem_synth_1"/>
+		<Parent Id="rlwe_p_mem_synth_1"/>
+		<Parent Id="rlwe_a_mem_synth_1"/>
+		<Parent Id="rlwe_r2_mem_synth_1"/>
+		<Parent Id="ROM8x1024_low_synth_1"/>
+		<Parent Id="ROM8x1024_invpsi_high_synth_1"/>
+		<Parent Id="ROM8x1024_psi_low_synth_1"/>
+		<Parent Id="ROM8x1024_psi_high_synth_1"/>
+		<Parent Id="ROM8x1024_a_low_synth_1"/>
+		<Parent Id="ROM8x1024_a_high_synth_1"/>
+		<Parent Id="ROM8x1024_p_low_synth_1"/>
+		<Parent Id="ROM8x1024_p_high_synth_1"/>
+		<Parent Id="ROM8x1024_r2_low_synth_1"/>
+		<Parent Id="ROM8x1024_r2_high_synth_1"/>
+		<Parent Id="Register_RAM_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="synth_1"/>
+	</Run>
+</Runs>
+

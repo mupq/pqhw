@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.3 (64-bit)
+# SW Build 1368829 on Mon Sep 28 20:06:43 MDT 2015
+# IP Build 1367837 on Mon Sep 28 08:56:14 MDT 2015
+# Start of session at: Mon Apr 03 10:14:22 2017
+# Process ID: 4484
+# Current directory: C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/invpsi_mem_synth_1
+# Command line: vivado.exe -log invpsi_mem.vds -mode batch -messageDb vivado.pb -notrace -source invpsi_mem.tcl
+# Log file: C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/invpsi_mem_synth_1/invpsi_mem.vds
+# Journal file: C:/Users/Toder/Documents/HardwareProjects/NewHope/NewHope.runs/invpsi_mem_synth_1\vivado.jou
+#-----------------------------------------------------------
+source invpsi_mem.tcl -notrace

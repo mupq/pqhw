@@ -1,0 +1,2 @@
+vhdl blk_mem_gen_v8_3_0 "./../../../ipstatic/blk_mem_gen_v8_3_0/simulation/blk_mem_gen_v8_3.vhd" 
+vhdl xil_defaultlib "./../../../../NewHope.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.vhd" 

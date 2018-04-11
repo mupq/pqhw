@@ -1,0 +1,7 @@
+vhdl xbip_dsp48_wrapper_v3_0_4 "./../../../ipstatic/xbip_dsp48_wrapper_v3_0_4/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" 
+vhdl xbip_utils_v3_0_4 "./../../../ipstatic/xbip_utils_v3_0_4/hdl/xbip_utils_v3_0_vh_rfs.vhd" 
+vhdl xbip_pipe_v3_0_0 "./../../../ipstatic/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd" 
+vhdl xbip_pipe_v3_0_0 "./../../../ipstatic/xbip_pipe_v3_0_0/hdl/xbip_pipe_v3_0.vhd" 
+vhdl xbip_dsp48_macro_v3_0_10 "./../../../ipstatic/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd" 
+vhdl xbip_dsp48_macro_v3_0_10 "./../../../ipstatic/xbip_dsp48_macro_v3_0_10/hdl/xbip_dsp48_macro_v3_0.vhd" 
+vhdl xil_defaultlib "./../../../../NewHope.srcs/sources_1/ip/xbip_dsp48_macro_0/sim/xbip_dsp48_macro_0.vhd" 
