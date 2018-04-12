@@ -1,0 +1,16 @@
+# Output products list for <red_8383489_divsor_core>
+_xmsgs\pn_parser.xmsgs
+demo_tb\tb_red_8383489_divsor_core.vhd
+red_8383489_divsor_core.asy
+red_8383489_divsor_core.gise
+red_8383489_divsor_core.ngc
+red_8383489_divsor_core.sym
+red_8383489_divsor_core.vhd
+red_8383489_divsor_core.vho
+red_8383489_divsor_core.xco
+red_8383489_divsor_core.xise
+red_8383489_divsor_core\doc\div_gen_v4_0_readme.txt
+red_8383489_divsor_core\doc\div_gen_v4_0_vinfo.html
+red_8383489_divsor_core\doc\ds819_div_gen.pdf
+red_8383489_divsor_core_flist.txt
+red_8383489_divsor_core_xmdf.tcl

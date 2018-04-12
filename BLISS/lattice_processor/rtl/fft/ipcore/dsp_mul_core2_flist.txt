@@ -1,0 +1,15 @@
+# Output products list for <dsp_mul_core2>
+_xmsgs\pn_parser.xmsgs
+dsp_mul_core2.asy
+dsp_mul_core2.gise
+dsp_mul_core2.ngc
+dsp_mul_core2.sym
+dsp_mul_core2.vhd
+dsp_mul_core2.vho
+dsp_mul_core2.xco
+dsp_mul_core2.xise
+dsp_mul_core2\doc\dsp48_macro_ds754.pdf
+dsp_mul_core2\doc\xbip_dsp48_macro_v2_1_readme.txt
+dsp_mul_core2\doc\xbip_dsp48_macro_v2_1_vinfo.html
+dsp_mul_core2_flist.txt
+dsp_mul_core2_xmdf.tcl

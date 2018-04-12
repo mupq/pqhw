@@ -1,0 +1,86 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    16:46:23 04/24/2012 
+-- Design Name: 
+-- Module Name:    red_1049089 - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use ieee.numeric_std.all;
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity red_1061093377 is
+  port (
+    clk   : in  std_logic;
+    val   : in  unsigned(2*30-1 downto 0) := (others => '0');
+    red   : out unsigned(30-1 downto 0)   := (others => '0');
+    delay : out integer                   := 6
+    );
+end red_1061093377;
+
+architecture Behavioral of red_1061093377 is
+  constant PRIME_P : unsigned := to_unsigned(1061093377, 30);
+
+  signal temp1 : unsigned(60-1 downto 0) := (others => '0');
+
+  signal temp2  : unsigned(60-1 downto 0) := (others => '0');
+  signal temp3  : unsigned(60-1 downto 0) := (others => '0');
+  signal in_reg : unsigned(60-1 downto 0) := (others => '0');
+
+  signal red_reg : unsigned(30-1 downto 0) := (others => '0');
+
+begin
+  process (clk)
+  begin
+    if rising_edge(clk) then
+
+      in_reg <= val;
+
+
+      temp1 <= resize(resize((193*193*in_reg(59 downto 44), 30+17+8)sll 16) + 194*PRIME_P- 194*in_reg(59 downto 44)+resize((in_reg(43 downto 30)*192, 47)*sll 16)+PRIME_P-in_reg(43 downto 30)+in_reg(29 downto 0) , temp1);
+
+
+      temp2 <= resize(resize((193*temp1(48 downto 30), 30+17+8)sll 16)+PRIME_P- temp1(48 downto 30)+temp1(29 downto 0) , temp2'length);
+
+
+      temp3 <= resize(resize((193*temp2(36 downto 30), 30+17+8)sll 16)+PRIME_P- temp2(48 downto 30)+temp2(29 downto 0) , temp2'length);
+
+
+      assert (temp3 < 4*PRIME_P) report "TOOO BIIIIGG" severity failure;
+
+      if temp3 >= 3*PRIME_P then
+        red_reg <= resize(temp3 - 3*PRIME_P, red'length);
+      elsif temp3 >= 2*PRIME_P then
+        red_reg <= resize(temp3 - 2*PRIME_P, red'length);
+      elsif temp3 >= PRIME_P then
+        red_reg <= resize(temp3 - PRIME_P, red'length);
+      else
+        red_reg <= resize(temp3, red'length);
+      end if;
+
+      red <= red_reg;
+    end if;
+  end process;
+
+end Behavioral;
+

@@ -1,0 +1,14 @@
+
+run
+-ifmt VHDL
+-ent s1_ram_core_exdes 
+-p xc6slx25-csg324-3
+-ifn xst.prj
+-write_timing_constraints No
+-iobuf YES
+-max_fanout 100
+-ofn s1_ram_core_exdes 
+-ofmt NGC
+-bus_delimiter ()
+-hierarchy_separator /
+-case Maintain

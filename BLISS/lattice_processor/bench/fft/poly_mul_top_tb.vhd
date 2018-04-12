@@ -1,0 +1,136 @@
+-- TestBench Template 
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity poly_mul_top_tb is
+end poly_mul_top_tb;
+
+architecture behavior of poly_mul_top_tb is
+
+  constant PRIME_P_WIDTH : integer := 9;
+  constant N_ELEMENTS    : integer := 128;
+  constant PRIME_P       : unsigned(PRIME_P_WIDTH-1 downto 0) := to_unsigned(257, PRIME_P_WIDTH);
+                                      
+signal error_happened : std_logic := '0';
+  signal   end_of_simulation : std_logic := '0';
+  constant clk_period        : time      := 10ns;
+
+  signal clk : std_logic;
+
+  signal start            : std_logic                          := '0';
+  signal finished         : std_logic                          := '0';
+  signal a_constant       : std_logic                          := '0';
+  signal din_valid        : std_logic                          := '0';
+  signal din_coefficient  : unsigned(PRIME_P_WIDTH-1 downto 0) := (others => '0');
+  signal din_ready        : std_logic                          := '1';
+  signal din_finished     : std_logic                          := '0';
+  signal dout_valid       : std_logic                          := '0';
+  signal dout_coefficient : unsigned(PRIME_P_WIDTH-1 downto 0) := (others => '0');
+  signal a_ready          : std_logic                          := '0';
+  signal a_filled         : std_logic                          := '0';
+  signal b_ready          : std_logic                          := '0';
+  signal b_filled         : std_logic                          := '0';
+  
+begin
+
+  poly_mul_top_1 : entity work.poly_mul_top
+    generic map (
+      N_ELEMENTS    => N_ELEMENTS,
+      PRIME_P_WIDTH => PRIME_P_WIDTH,
+      XN            => -1 ,
+      PRIME_P       => PRIME_P,
+      PSI           => to_unsigned(3, PRIME_P_WIDTH),
+      OMEGA         => to_unsigned(9, PRIME_P_WIDTH),
+      PSI_INVERSE   => to_unsigned(86, PRIME_P_WIDTH),
+      OMEGA_INVERSE => to_unsigned(200, PRIME_P_WIDTH),
+      N_INVERSE =>   to_unsigned(255, PRIME_P_WIDTH)
+      )
+    port map (
+      clk      => clk,
+      start    => start,
+      finished => finished,
+      a_ready  => a_ready ,
+      a_filled => a_filled,
+      b_ready  => b_ready ,
+      b_filled => b_filled ,
+
+      a_constant       => a_constant,
+      din_valid        => din_valid,
+      din_coefficient  => din_coefficient,
+      din_finished     => din_finished,
+      dout_valid       => dout_valid,
+      dout_coefficient => dout_coefficient
+      );
+
+
+  -- Clock process definitions
+  clk_process : process
+  begin
+    clk <= '0';
+    wait for clk_period/2;
+    clk <= '1';
+    wait for clk_period/2;
+    if end_of_simulation = '1' then
+      wait;
+    end if;
+  end process;
+
+
+  -- Stimulus process
+  stim_proc : process
+  begin
+    -- hold reset state for 100 ns.
+    wait for 100 ns;
+
+    wait for clk_period*10;
+
+    -- insert stimulus here
+    wait until falling_edge(clk);
+    wait for 1ns;
+    start      <= '1';
+    a_constant <= '0';
+    wait until falling_edge(clk);
+    wait for 1ns;
+    start      <= '0';
+    --Input A
+    if a_ready = '0' then
+      wait until a_ready = '1';
+    end if;
+    wait until falling_edge(clk);
+    wait for 1ns;
+    for i in 0 to N_ELEMENTS-1 loop
+      din_valid       <= '1';
+      din_coefficient <= to_unsigned(i mod to_integer(PRIME_P), din_coefficient'length);
+      wait until falling_edge(clk);
+      wait for 1ns;
+    end loop;  -- i
+    din_valid <= '0';
+    --input B
+    if b_ready = '0' then
+      wait until b_ready = '1';
+    end if;
+    wait until falling_edge(clk);
+    wait for 1ns;
+    for i in 0 to N_ELEMENTS-1 loop
+      din_valid       <= '1';
+      din_coefficient <= to_unsigned(i mod to_integer(PRIME_P), din_coefficient'length);
+      wait until falling_edge(clk);
+      wait for 1ns;
+    end loop;  -- i
+    din_valid <= '0';
+
+
+
+    wait for N_ELEMENTS*1500*clk_period;
+    end_of_simulation <= '1';
+    wait;
+
+    
+  end process;
+
+  
+
+
+end;

@@ -1,0 +1,222 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    13:13:05 02/03/2014 
+-- Design Name: 
+-- Module Name:    ber_eval - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+
+
+
+entity ber_eval is
+  generic (
+    MAX_PREC : integer := 79;
+    CONST_K  : integer := 253;
+    MAX_X    : integer := 10
+    );
+  port (
+    clk : in std_logic;
+
+    --Fifo interface to get randomness
+    rand_rd_en : out std_logic;
+    rand_din   : in  std_logic;
+    rand_empty : in  std_logic;
+    rand_valid : in  std_logic;
+
+    fifo_ber_empty : in  std_logic;
+    fifo_ber_rd_en : out std_logic;
+    fifo_ber_valid : in  std_logic;
+    fifo_ber_in    : in  std_logic_vector(integer(ceil(log2(real((CONST_K-1)*((CONST_K-1)+2*CONST_K*MAX_X)))))-1 downto 0);
+    fifo_z_empty   : in  std_logic;
+    fifo_z_rd_en   : out std_logic;
+    fifo_z_valid   : in  std_logic;
+    fifo_z_in      : in  std_logic_vector(integer(ceil(log2(real((CONST_K)*(MAX_X)+CONST_K-1))))-1 downto 0);
+
+    z_dout  : out std_logic_vector(integer(ceil(log2(real((CONST_K)*(MAX_X)+CONST_K-1))))-1 downto 0) := (others => '0');
+    z_full  : in  std_logic;
+    z_wr_en : out std_logic
+    );
+end ber_eval;
+
+architecture Behavioral of ber_eval is
+
+  constant MAX_BER : integer := fifo_ber_in'length;
+  constant MAX_Z   : integer := fifo_z_in'length;
+
+
+  type bernoulli_vals_type is array (0 to MAX_BER) of std_logic_vector(MAX_PREC-1 downto 0);
+  constant bernoulli_vals : bernoulli_vals_type := (
+    "1111111111111111010010100101001001111000111011101000010110111000100011100111001",
+    "1111111111111110100101001010010101110010110010111110001000001111101010001011001",
+    "1111111111111101001010010100110011101001010100011011000010011000101101001101010",
+    "1111111111111010010100101010000111100001011111111010001100011110110011011100101",
+    "1111111111110100101001010110001111111110000101001100111100010101001000111101000",
+    "1111111111101001010010110100100011100101101000111101100011001100001100001101111",
+    "1111111111010010100110001001010101011010010100100011100101110111011010000011110",
+    "1111111110100101001110010011100000111001111010011010111111000110000100010110001",
+    "1111111101001010100100101010000011010010101001000100100110001100100111111001010",
+    "1111111010010101101001011101010101111100100110001110011011001100000010011100011",
+    "1111110100101101010011001000111000011001001011110101100010011111001110011000001",
+    "1111101001100010100100010101010011011110101000010001110110100011111011110100011",
+    "1111010011100100101010011100110101011010010011100110000110010100001111111100010",
+    "1110101001000100101011111110111001011010100011110000101110010101101001111101100",
+    "1101011001100001101001000000110110101101000101010101101011100111110100100011010",
+    "1011001110000111011000111000010010011000110111100110010010101000110111001100011",
+    "0111110111100110100111001100010110001010010100000000111000111100010100010101001",
+    "0011110111101011000001001101011011111100000010000000111011000000001101110001011",
+    "0000111011111001110110000001000001010110111001011111101000111101010001010011010",
+    "0000000011100000010001110111011111001111101001011100011001101110100011110100100",
+    "0000000000000000110001000111110100100101100111110000111101011011111010100001100",
+    "0000000000000000000000000000000010010110110011111101111011001001010100100110000");
+  --"0000000000000000000000000000000000000000000000000000000000000000010110001101100");
+
+  signal ber_val        : std_logic_vector(MAX_BER-1 downto 0);
+  signal z_val          : std_logic_vector(MAX_Z-1 downto 0);
+  signal bernoulli_line : std_logic_vector(MAX_PREC-1 downto 0);
+  signal counter_exp    : integer := 0;
+  signal counter_ber    : integer := 0;
+
+  type   eg_state is (IDLE, WAIT_CYCLE, WAIT_RAND, WAIT_RAND2, STORE, BERNOULLI, REJECTION, FIN, WAIT_RAND_AVAIL);
+  signal state_reg : eg_state := IDLE;
+
+  signal read_once : std_logic := '1';
+begin
+
+
+  bernoulli_line <= bernoulli_vals(counter_exp);
+  process(clk)
+  begin  -- process c
+    if rising_edge(clk) then
+      z_wr_en        <= '0';
+      fifo_ber_rd_en <= '0';
+      fifo_z_rd_en   <= '0';
+      rand_rd_en     <= '0';
+
+      case state_reg is
+        when IDLE =>
+          if fifo_ber_empty = '0' and fifo_z_empty = '0' then
+            fifo_ber_rd_en <= '1';
+            fifo_z_rd_en   <= '1';
+            state_reg      <= WAIT_CYCLE;
+          end if;
+
+        when WAIT_CYCLE =>
+          state_reg <= STORE;
+
+          
+        when STORE =>
+          --Store both values in a register
+          if fifo_z_valid = '1' and fifo_ber_valid = '1' then
+            ber_val     <= fifo_ber_in;
+            z_val       <= fifo_z_in;
+            counter_exp <= MAX_BER-1;
+            state_reg   <= BERNOULLI;
+            z_wr_en     <= '0';
+          else
+            state_reg <= IDLE;
+          end if;
+
+        when BERNOULLI =>
+          --Do the rejection sampling
+          --There should be randomness available
+          if rand_empty = '0' then
+            --Whole poly has been checked -> Finished
+            --See if a one bit is set, then do rejection sampling
+            if ber_val(counter_exp) = '1' then
+              rand_rd_en  <= '1';
+              state_reg   <= WAIT_RAND;
+              counter_ber <= MAX_PREC-1;
+            else
+              --Some more logic, to search for zer
+              if counter_exp > 2 then
+                if ber_val(counter_exp-1) = '0' then
+                  counter_exp <= counter_exp-2;
+                else
+                  counter_exp <= counter_exp-1;
+                  rand_rd_en  <= '1';
+                  state_reg   <= WAIT_RAND;
+                  counter_ber <= MAX_PREC-1;
+                end if;
+              else
+                if counter_exp > 0 then
+                  counter_exp <= counter_exp-1;
+                elsif counter_exp = 0 then
+                  --The last bit is not one, we can accept
+                  state_reg <= FIN;
+                end if;
+                end if; 
+              end if;
+            end if;
+
+
+            when WAIT_RAND =>
+            state_reg <= REJECTION;
+
+            when REJECTION =>
+            if rand_valid = '1' then
+              if (bernoulli_line(counter_ber) = '1' and rand_din = '1') or (bernoulli_line(counter_ber) = '0' and rand_din = '0') then
+                --Nothing happened - no decision made
+                counter_ber <= counter_ber-1;
+
+                if rand_empty = '1' then
+                  state_reg <= WAIT_RAND_AVAIL;
+                else
+                  state_reg  <= WAIT_RAND2;
+                  rand_rd_en <= '1';
+                end if;
+
+              elsif bernoulli_line(counter_ber) = '1' and rand_din = '0' then
+                --smaller = accept this line. See next lines
+                state_reg <= BERNOULLI;
+                if counter_exp = 0 then
+                  state_reg <= FIN;
+                else
+                  counter_exp <= counter_exp-1;
+                end if;
+              elsif bernoulli_line(counter_ber) = '0' and rand_din = '1' then
+                --greater = reject
+                state_reg <= IDLE;
+              end if;
+            end if;
+
+            when WAIT_RAND_AVAIL =>
+            if rand_empty = '0' then
+              state_reg  <= WAIT_RAND2;
+              rand_rd_en <= '1';
+            end if;
+
+            when WAIT_RAND2 =>
+            state_reg <= REJECTION;
+
+            when FIN =>
+            if z_full = '0' then
+              z_dout    <= z_val;
+              z_wr_en   <= '1';
+              state_reg <= IDLE;
+            end if;
+            
+          end case;
+          end if;
+      end process;
+
+
+
+    end Behavioral;
+

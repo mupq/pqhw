@@ -1,0 +1,22 @@
+#PACE: Start of PACE I/O Pin Assignments
+# Output LEDS
+
+
+NET "status<0>"  LOC = "E13"  ; # LED 0
+NET "status<1>"  LOC = "C14"  ; # LED 1
+NET "status<2>"  LOC = "C4"  ; # LED 2
+NET "status<3>"  LOC = "A4"  ; # LED 3
+
+# User Reset via Button 0
+#NET "RST"  LOC = "P4";
+#NET "RST"  LOC = "N4";
+
+# CPU User Clock (27 MHz)
+NET "CLK" LOC = "V10";
+NET CLK PERIOD = 37.03 ns ;
+
+# UART TXD
+#NET "TXD"  LOC = "L12";
+
+# UART RXD
+#NET "RXD"  LOC = "K14";

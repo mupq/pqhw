@@ -1,0 +1,13 @@
+run
+-ifmt VHDL
+-ent keccak_in_core_new_exdes
+-p xc6slx25-csg324-3
+-ifn xst.prj
+-write_timing_constraints No
+-iobuf YES
+-max_fanout 100
+-ofn keccak_in_core_new_exdes 
+-ofmt NGC
+-bus_delimiter ()
+-hierarchy_separator /
+-case Maintain

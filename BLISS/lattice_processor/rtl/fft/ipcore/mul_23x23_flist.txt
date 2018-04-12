@@ -1,0 +1,15 @@
+# Output products list for <mul_23x23>
+_xmsgs\pn_parser.xmsgs
+mul_23x23.asy
+mul_23x23.gise
+mul_23x23.ngc
+mul_23x23.sym
+mul_23x23.vhd
+mul_23x23.vho
+mul_23x23.xco
+mul_23x23.xise
+mul_23x23\doc\mult_gen_ds255.pdf
+mul_23x23\doc\mult_gen_v11_2_readme.txt
+mul_23x23\doc\mult_gen_v11_2_vinfo.html
+mul_23x23_flist.txt
+mul_23x23_xmdf.tcl

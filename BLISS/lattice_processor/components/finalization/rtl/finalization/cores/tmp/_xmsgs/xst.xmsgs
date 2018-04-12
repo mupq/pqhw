@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="321" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" Line 1836: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" Line 1842: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" Line 1848: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" Line 1849: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" Line 1850: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" Line 1851: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="321" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" Line 1852: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_multaccum_v2_0\multaccum_dsp.vhd" Line 698: Using initial value <arg fmt="%s" index="1">&quot;000000000000000000000000000000000000000000000000&quot;</arg> for <arg fmt="%s" index="2">c_0</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 180: Net &lt;<arg fmt="%s" index="1">cea_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 181: Net &lt;<arg fmt="%s" index="1">ceb_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 182: Net &lt;<arg fmt="%s" index="1">cec_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 183: Net &lt;<arg fmt="%s" index="1">ced_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 184: Net &lt;<arg fmt="%s" index="1">cem_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 186: Net &lt;<arg fmt="%s" index="1">cecarryin_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 187: Net &lt;<arg fmt="%s" index="1">ceopmode_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 188: Net &lt;<arg fmt="%s" index="1">carryin_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 190: Net &lt;<arg fmt="%s" index="1">rsta_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 191: Net &lt;<arg fmt="%s" index="1">rstb_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 192: Net &lt;<arg fmt="%s" index="1">rstc_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 193: Net &lt;<arg fmt="%s" index="1">rstd_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 194: Net &lt;<arg fmt="%s" index="1">rstm_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 196: Net &lt;<arg fmt="%s" index="1">rstcarryin_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\thomas\SHA\Projekte\BLISS\code\bliss_arithmetic\lattice_processor\components\finalization\rtl\finalization\cores\tmp\_cg\_dbg\xbip_dsp48_wrapper_v2_0\xbip_dsp48a_wrapper_v2_0.vhd" Line 197: Net &lt;<arg fmt="%s" index="1">rstopmode_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="info" file="Xst" num="1901" delta="old" >Instance <arg fmt="%s" index="1">i_primitive</arg> in unit <arg fmt="%s" index="2">xbip_dsp48a_wrapper_v2_0</arg> of type <arg fmt="%s" index="3">DSP48A</arg> has been replaced by <arg fmt="%s" index="4">DSP48A1</arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

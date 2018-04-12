@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1355908492 source:c:\users\thomas\sha\projekte\rewrite_signature\lattice_processor\lattice_processor\bench\hash_engine\hash_engine_verification\hash_engine_model\main.c
+	<stdio.h>
+	<stdlib.h>
+	"quark.h"
+	"sig_model.h"
+	<time.h>
+
+1355909641 c:\users\thomas\sha\projekte\rewrite_signature\lattice_processor\lattice_processor\bench\hash_engine\hash_engine_verification\hash_engine_model\quark.h
+
+1355823344 source:c:\users\thomas\sha\projekte\rewrite_signature\lattice_processor\lattice_processor\bench\hash_engine\hash_engine_verification\hash_engine_model\quark.c
+	<stdio.h>
+	"quark.h"
+
+1355840423 c:\users\thomas\sha\projekte\rewrite_signature\lattice_processor\lattice_processor\bench\hash_engine\hash_engine_verification\hash_engine_model\sig_model.h
+	<stdint.h>
+
+1355906019 source:c:\users\thomas\sha\projekte\rewrite_signature\lattice_processor\lattice_processor\bench\hash_engine\hash_engine_verification\hash_engine_model\sig_model.c
+	<assert.h>
+	"sig_model.h"
+

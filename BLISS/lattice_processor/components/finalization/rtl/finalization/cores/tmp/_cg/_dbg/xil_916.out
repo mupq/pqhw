@@ -1,0 +1,17 @@
+SET_PARAMETER accum_mode Add
+SET_PARAMETER a_input_type Signed
+SET_PARAMETER a_input_width 16
+SET_PARAMETER bypass false
+SET_PARAMETER implementation DSP48
+SET_PARAMETER bypass_sense Active_High
+SET_PARAMETER b_input_type Signed
+SET_PARAMETER output_width 48
+SET_PARAMETER b_input_width 16
+SET_PARAMETER latency 1
+SET_PARAMETER sync_ce_priority Sync_Overrides_CE
+SET_PARAMETER component_name norm_mac_core
+SET_PARAMETER accum_width 48
+SET_PARAMETER latency_configuration Manual
+SET_ERROR_CODE 2
+SET_ERROR_MSG  CANCEL: Customization cancelled.
+SET_ERROR_TEXT Finished initializing IP model.	

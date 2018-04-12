@@ -1,0 +1,49 @@
+SET_FLAG DEBUG FALSE
+SET_FLAG MODE INTERACTIVE
+SET_FLAG STANDALONE_MODE FALSE
+SET_PREFERENCE devicefamily spartan6
+SET_PREFERENCE device xc6slx25
+SET_PREFERENCE speedgrade -3
+SET_PREFERENCE package csg324
+SET_PREFERENCE verilogsim false
+SET_PREFERENCE vhdlsim true
+SET_PREFERENCE simulationfiles Behavioral
+SET_PREFERENCE busformat BusFormatAngleBracketNotRipped
+SET_PREFERENCE outputdirectory C:/Users/thomas/SHA/Projekte/BLISS/code/bliss_arithmetic/lattice_processor/components/finalization/rtl/finalization/cores/
+SET_PREFERENCE workingdirectory C:/Users/thomas/SHA/Projekte/BLISS/code/bliss_arithmetic/lattice_processor/components/finalization/rtl/finalization/cores/tmp/
+SET_PREFERENCE subworkingdirectory C:/Users/thomas/SHA/Projekte/BLISS/code/bliss_arithmetic/lattice_processor/components/finalization/rtl/finalization/cores/tmp/_cg/
+SET_PREFERENCE transientdirectory C:/Users/thomas/SHA/Projekte/BLISS/code/bliss_arithmetic/lattice_processor/components/finalization/rtl/finalization/cores/tmp/_cg/_dbg/
+SET_PREFERENCE designentry VHDL
+SET_PREFERENCE flowvendor Other
+SET_PREFERENCE addpads false
+SET_PREFERENCE projectname coregen
+SET_PREFERENCE formalverification false
+SET_PREFERENCE asysymbol false
+SET_PREFERENCE implementationfiletype Ngc
+SET_PREFERENCE foundationsym false
+SET_PREFERENCE createndf false
+SET_PREFERENCE removerpms false
+SET_PARAMETER Component_Name norm_mac_core
+SET_PARAMETER Implementation DSP48
+SET_PARAMETER A_Input_Type Signed
+SET_PARAMETER B_Input_Type Signed
+SET_PARAMETER A_Input_Width 16
+SET_PARAMETER B_Input_Width 16
+SET_PARAMETER Accum_Width 48
+SET_PARAMETER Output_Width 48
+SET_PARAMETER Accum_Mode Add
+SET_PARAMETER Bypass false
+SET_PARAMETER Bypass_Sense Active_High
+SET_PARAMETER Sync_CE_Priority Sync_Overrides_CE
+SET_PARAMETER Latency_Configuration Manual
+SET_PARAMETER Latency 1
+SET_CORE_NAME Multiply Accumulator
+SET_CORE_VERSION 2.0
+SET_CORE_VLNV xilinx.com:ip:xbip_multaccum:2.0
+SET_CORE_CLASS com.xilinx.ip.xbip_multaccum_v2_0.xbip_multaccum_v2_0
+SET_CORE_PATH C:/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/dsp/com/xilinx/ip/xbip_multaccum_v2_0
+SET_CORE_GUIPATH C:/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/dsp/com/xilinx/ip/xbip_multaccum_v2_0/gui/xbip_multaccum_v2_0.tcl
+SET_CORE_DATASHEET C:\Xilinx\14.7\ISE_DS\ISE\coregen\ip\xilinx\dsp\com\xilinx\ip\xbip_multaccum_v2_0\doc\xbip_multaccum_ds716.pdf
+ADD_CORE_DOCUMENT <C:\Xilinx\14.7\ISE_DS\ISE\coregen\ip\xilinx\dsp\com\xilinx\ip\xbip_multaccum_v2_0\doc\xbip_multaccum_v2_0_readme.txt><xbip_multaccum_v2_0_readme.txt>
+ADD_CORE_DOCUMENT <C:\Xilinx\14.7\ISE_DS\ISE\coregen\ip\xilinx\dsp\com\xilinx\ip\xbip_multaccum_v2_0\doc\xbip_multaccum_v2_0_vinfo.html><xbip_multaccum_v2_0_vinfo.html>
+ADD_CORE_DOCUMENT <C:\Xilinx\14.7\ISE_DS\ISE\coregen\ip\xilinx\dsp\com\xilinx\ip\xbip_multaccum_v2_0\doc\xbip_multaccum_ds716.pdf><xbip_multaccum_ds716.pdf>

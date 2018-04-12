@@ -1,0 +1,190 @@
+--------------------------------------------------------------------------------
+-- Company: 
+-- Engineer:
+--
+-- Create Date:   12:02:09 04/13/2012
+-- Design Name:   
+-- Module Name:   C:/Users/thomas/SHA/Projekte/poly_FFT/code/poly_fft/bench/fft/fft_mul_poly_benc_tb.vhd
+-- Project Name:  poly_fft
+-- Target Device:  
+-- Tool versions:  
+-- Description:   
+-- 
+-- VHDL Test Bench Created by ISE for module: fft_top
+-- 
+-- Dependencies:
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+--
+-- Notes: 
+-- This testbench has been automatically generated using types std_logic and
+-- std_logic_vector for the ports of the unit under test.  Xilinx recommends
+-- that these types always be used for the top-level I/O of a design in order
+-- to guarantee that the testbench will bind correctly to the post-implementation 
+-- simulation model.
+--------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--USE ieee.numeric_std.ALL;
+
+entity school_mul_poly_benc_tb is
+end school_mul_poly_benc_tb;
+
+architecture behavior of  school_mul_poly_benc_tb is
+
+  -- Component Declaration for the Unit Under Test (UUT)
+
+
+  -- Clock period definitions
+  
+  signal   end_of_simulation : std_logic := '0';
+  signal   error_happened    : std_logic := '0';
+  signal   clk               : std_logic;
+  constant clk_period        : time      := 10 ns;
+  constant SIMULATIONS       : integer   := 5;
+
+  signal error_vector   : std_logic_vector(SIMULATIONS-1 downto 0) := (others => '0');
+  signal sim_fin_vector : std_logic_vector(SIMULATIONS-1 downto 0) := (others => '0');
+
+  signal fullone : std_logic_vector(SIMULATIONS-1 downto 0) := (others => '1');
+
+  type cycles_type is array (SIMULATIONS-1 downto 0) of unsigned(31 downto 0);
+
+  signal cycles : cycles_type := (others => (others => '0'));
+begin
+
+  poly_mul_top_gen_tb_1 : entity work.poly_mul_top_gen_tb
+    generic map (
+      XN            => -1,
+      N_ELEMENTS    => 32,
+      PRIME_P_WIDTH => 5,
+      TARGET => "SCHOOLBOOK",
+     PRIME_P       => to_unsigned(17, 5)
+      )
+    port map (
+      cycles              => cycles(0),
+    use_rand_input      => '1',
+      simulation_runs     => 3,
+     simulation_finished => sim_fin_vector(0),
+      error_happened      => error_vector(0)
+     );
+
+  poly_mul_top_gen_tb_2 : entity work.poly_mul_top_gen_tb
+    generic map (
+      XN            => -1,
+      N_ELEMENTS    => 256,
+      PRIME_P_WIDTH => 21,
+      TARGET => "SCHOOLBOOK",
+     PRIME_P       => to_unsigned(1049089,21)
+      )
+    port map (
+      cycles              => cycles(1),
+    use_rand_input      => '1',
+      simulation_runs     => 4,
+     simulation_finished => sim_fin_vector(1),
+      error_happened      => error_vector(1)
+     );
+
+  
+    poly_mul_top_gen_tb_3 : entity work.poly_mul_top_gen_tb
+    generic map (
+      XN            => -1,
+      N_ELEMENTS    => 128,
+      PRIME_P_WIDTH => 17,
+      TARGET => "SCHOOLBOOK",
+     PRIME_P       => to_unsigned(65537,17)
+      )
+    port map (
+      cycles              => cycles(2),
+    use_rand_input      => '1',
+      simulation_runs     => 4,
+     simulation_finished => sim_fin_vector(2),
+      error_happened      => error_vector(2)
+     );
+  
+  poly_mul_top_gen_tb_4 : entity work.poly_mul_top_gen_tb
+    generic map (
+      XN            => -1,
+      N_ELEMENTS    => 1024,
+      PRIME_P_WIDTH => 17,
+      TARGET => "SCHOOLBOOK",
+     PRIME_P       => to_unsigned(65537,17)
+      )
+    port map (
+      cycles              => cycles(3),
+    use_rand_input      => '1',
+      simulation_runs     => 4,
+     simulation_finished => sim_fin_vector(3),
+      error_happened      => error_vector(3)
+     );
+
+ poly_mul_top_gen_tb_5 : entity work.poly_mul_top_gen_tb
+    generic map (
+      XN            => -1,
+      N_ELEMENTS    => 4096,
+      PRIME_P_WIDTH => 17,
+      TARGET => "SCHOOLBOOK",
+     PRIME_P       => to_unsigned(65537,17)
+      )
+    port map (
+      cycles              => cycles(4),
+    use_rand_input      => '1',
+      simulation_runs     => 4,
+     simulation_finished => sim_fin_vector(4),
+      error_happened      => error_vector(4)
+     );
+  
+
+
+
+
+
+  -- Clock process definitions
+  clk_process : process
+  begin
+    clk <= '0';
+    wait for clk_period/2;
+    clk <= '1';
+    wait for clk_period/2;
+    if end_of_simulation = '1' then
+      wait;
+    end if;
+  end process;
+
+  -- Stimulus process
+  stim_proc : process
+  begin
+    -- hold reset state for 100 ns.
+    wait for 100 ns;
+
+    if unsigned(error_vector) /= 0 then
+      error_happened <= '1';
+    end if;
+
+
+    if sim_fin_vector = fullone then
+      end_of_simulation <= '1';
+      wait for 10000 ns;
+
+      if unsigned(error_vector) = 0 then
+        report "OK" severity note;
+      else
+        report "ERROR" severity note;
+      end if;
+
+      wait;
+    end if;
+
+    
+    
+    
+    
+  end process;
+
+end;

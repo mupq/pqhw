@@ -1,0 +1,319 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    13:31:08 03/20/2012 
+-- Design Name: 
+-- Module Name:    fft_top - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+
+entity fft_top is
+  generic (
+    N_ELEMENTS    : integer := 512;
+    PRIME_P_WIDTH : integer := 10;
+    XN            : integer := -1
+    );
+  port (
+    clk           : in  std_logic;
+    usr_start     : in  std_logic;
+    usr_inverse   : in  std_logic;      --0=normal FFT, 1=inverse FFT
+    usr_finished  : out std_logic;
+    --connection to w table
+    w_psi_req     : out std_logic;
+    w_inverse_req : out std_logic;
+    w_index       : out unsigned(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0)         := (others => '0');
+    w_out_val     : in  unsigned(PRIME_P_WIDTH-1 downto 0)                                 := (others => '0');
+    w_delay       : in  integer;
+    --connection to arithmetic unit
+    a_op          : out std_logic_vector(0 downto 0)                                       := (others => '0');
+    a_w_in        : out unsigned(PRIME_P_WIDTH-1 downto 0)                                 := (others => '0');
+    a_a_in        : out unsigned(PRIME_P_WIDTH-1 downto 0)                                 := (others => '0');
+    a_b_in        : out unsigned(PRIME_P_WIDTH-1 downto 0)                                 := (others => '0');
+    a_x_out       : in  unsigned(PRIME_P_WIDTH-1 downto 0)                                 := (others => '0');
+    a_delay       : in  integer                                                            := 35;
+    --Storing/Requesting of coefficients
+    bram_addra    : out std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+    bram_doa      : in  std_logic_vector(PRIME_P_WIDTH-1 downto 0)                         := (others => '0');
+    bram_addrb    : out std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+    bram_dib      : out std_logic_vector(PRIME_P_WIDTH-1 downto 0)                         := (others => '0');
+    bram_web      : out std_logic                                                          := '0';
+    bram_delay    : in  integer
+    );
+end fft_top;
+
+architecture Behavioral of fft_top is
+
+  signal addr_start    : std_logic;
+  signal addr_finished : std_logic;
+  signal addr_valid    : std_logic;
+  signal addr_a        : unsigned(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+  signal addr_b        : unsigned(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+  signal addr_n        : unsigned(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+
+  signal res_wr_addr : std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+
+  signal bram_addra_intern : std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+
+
+  signal max_in_delay         : integer   := 0;
+  signal w_table_delay        : integer   := 0;
+  signal bram_table_delay     : integer   := 0;
+  signal wr_addr_reg_delay    : integer   := 0;
+  signal wr_addr_we_reg_delay : integer   := 0;
+  signal addr_start_delayd    : std_logic := '0';
+
+
+  signal wr_addr_we_rin  : std_logic_vector(0 downto 0) := (others => '0');
+  signal wr_addr_we_rout : std_logic_vector(0 downto 0) := (others => '0');
+
+  signal fft_fin_rin  : std_logic_vector(0 downto 0) := (others => '0');
+  signal fft_fin_rout : std_logic_vector(0 downto 0) := (others => '0');
+
+
+  signal working : std_logic := '0';
+
+  signal inverse    : std_logic := '0';
+  signal rd_trigger : std_logic := '0';  --triggers if two values are read, or
+                                         --written
+
+  signal ab_pre_mar : std_logic_vector(PRIME_P_WIDTH-1 downto 0) := (others => '0');
+
+
+  signal b_pre_mar    : std_logic_vector(PRIME_P_WIDTH-1 downto 0)    := (others => '0');
+  signal w_pre_mar    : std_logic_vector(w_out_val'length-1 downto 0) := (others => '0');
+  signal w_pre_mar_s1 : std_logic_vector(w_out_val'length-1 downto 0) := (others => '0');
+  signal w_pre_mar_s2 : std_logic_vector(w_out_val'length-1 downto 0) := (others => '0');
+
+  signal desr_en       : std_logic                                  := '0';
+  signal desr_val_in   : std_logic_vector(PRIME_P_WIDTH-1 downto 0) := (others => '0');
+  signal desr_val1_out : std_logic_vector(PRIME_P_WIDTH-1 downto 0) := (others => '0');
+  signal desr_val2_out : std_logic_vector(PRIME_P_WIDTH-1 downto 0) := (others => '0');
+  
+begin
+
+
+  --Check which component has the biggest delay. Use Register to ensure that
+  --both outputs arrive at the same time at the arithemtic component mar
+
+  max_in_delay     <= bram_delay              when bram_delay > w_delay        else w_delay;
+  w_table_delay    <= max_in_delay-w_delay    when max_in_delay-w_delay > 0    else 0;
+  bram_table_delay <= max_in_delay-bram_delay when max_in_delay-bram_delay > 0 else 0;
+
+
+  w_table_reg_1 : entity work.dyn_shift_reg
+    generic map (
+      width => w_out_val'length
+      )
+    port map (
+      clk    => clk,
+      depth  => w_table_delay,
+      Input  => std_logic_vector(w_out_val),
+      Output => w_pre_mar_s1
+      );
+
+  brama_reg_11 : entity work.dyn_shift_reg
+    generic map (
+      width => bram_doa'length
+      )
+    port map (
+      clk    => clk,
+      depth  => bram_table_delay,
+      Input  => bram_doa,
+      Output => ab_pre_mar
+      );
+
+  --brama_reg_12 : entity work.dyn_shift_reg
+  --  generic map (
+  --    width => bram_dob'length
+  --    )
+  --  port map (
+  --    clk    => clk,
+  --    depth  => bram_table_delay,
+  --    Input  => bram_dob,
+  --    Output => b_pre_mar
+  --    );
+
+
+  --rd_trigger_vector(0) <= rd_trigger;
+  --rd_trigger_req_1 : entity work.dyn_shift_reg
+  --  generic map (
+  --    width => 1
+  --    )
+  --  port map (
+  --    clk    => clk,
+  --    depth  => max_in_delay,
+  --    Input  => rd_trigger_vector,
+  --    Output => rd_trigger_pre_mar
+  --    );
+
+
+  de_ser_1 : entity work.de_ser
+    generic map (
+      WIDTH => PRIME_P_WIDTH
+      )
+    port map (
+      clk      => clk,
+      en       => desr_en,
+      val_in   => desr_val_in,
+      val1_out => desr_val1_out,
+      val2_out => desr_val2_out
+      );
+
+  fft_addr_gen_1 : entity work.fft_addr_gen
+    generic map (
+      N_ELEMENTS => N_ELEMENTS
+      )
+    port map (
+      clk      => clk,
+      start    => addr_start,
+      finished => addr_finished,
+      valid    => addr_valid,
+      a        => addr_a,
+      b        => addr_b,
+      n        => addr_n,
+      op       => open
+      );
+
+  wr_addr_reg_delay <= max_in_delay+1+a_delay+1;
+  wr_addr_reg_1 : entity work.dyn_shift_reg
+    generic map (
+      width => bram_addra'length
+      )
+    port map (
+      clk    => clk,
+      depth  => wr_addr_reg_delay,
+      Input  => bram_addra_intern,
+      Output => res_wr_addr
+      );
+
+  wr_addr_we_reg_delay <= max_in_delay+1+a_delay;
+  wr_addr_we_reg_1 : entity work.dyn_shift_reg
+    generic map (
+      width => 1
+      )
+    port map (
+      clk    => clk,
+      depth  => wr_addr_we_reg_delay,
+      Input  => wr_addr_we_rin,
+      Output => wr_addr_we_rout
+      );
+
+
+  finished_ref_reg_1 : entity work.dyn_shift_reg
+    generic map (
+      width => 1
+      )
+    port map (
+      clk    => clk,
+      depth  => wr_addr_we_reg_delay,
+      Input  => fft_fin_rin,
+      Output => fft_fin_rout
+      );
+
+
+
+  --Connection of the address generator to the w table and coefficient block ram
+  bram_addra_intern <= std_logic_vector(addr_b) when rd_trigger = '0' else std_logic_vector(addr_a);
+  bram_addra        <= bram_addra_intern;
+  --Conneect output of the block ram with the deserializer
+  desr_val_in       <= ab_pre_mar;
+
+  --Connect output of the deserializer with the MAR
+  a_op(0) <= rd_trigger;
+  a_w_in  <= unsigned(w_pre_mar);
+  a_a_in  <= unsigned(desr_val1_out);
+  a_b_in  <= unsigned(desr_val2_out);
+
+
+  --Connect output of the MAR component with the input of the BRAM
+  bram_addrb <= res_wr_addr;
+  bram_dib   <= std_logic_vector(a_x_out);
+  bram_web   <= wr_addr_we_rout(0);
+
+
+  --input register transfer
+  process (clk)
+  begin
+    if rising_edge(clk) then
+      w_pre_mar_s2      <= w_pre_mar_s1;
+      w_pre_mar         <= w_pre_mar_s2;
+      w_psi_req         <= '0';         --FFT does not need psi
+      w_inverse_req     <= '0';
+      usr_finished      <= '0';
+      fft_fin_rin(0)    <= '0';
+      wr_addr_we_rin(0) <= '0';
+
+
+      rd_trigger <= rd_trigger xor '1';
+
+      addr_start <= addr_start_delayd;
+
+      
+      --Trigger the beginning of the FFT
+      if usr_start = '1' then
+        working       <= '1';
+        w_inverse_req <= usr_inverse;   --determine if we perform FFT or IFFT
+
+        if max_in_delay mod 2 = 0 then
+          rd_trigger        <= '0';
+          desr_en           <= '1';
+          addr_start        <= '1';
+          addr_start_delayd <= '1';
+        else
+          addr_start_delayd <= '1';
+          rd_trigger        <= '1';
+          desr_en           <= '0';
+        end if;
+      end if;
+      
+
+
+
+      --Do the work
+      if working = '1' then
+        addr_start_delayd <= '0';
+        addr_start        <= '0';
+
+        if addr_valid = '1' then
+          
+          wr_addr_we_rin(0) <= '1';
+          desr_en           <= desr_en or '1';
+          w_index           <= addr_n;
+        else
+          wr_addr_we_rin(0) <= '0';
+        end if;
+      end if;
+
+      if addr_finished = '1' then
+        working        <= '0';
+        fft_fin_rin(0) <= '1';
+        
+      end if;
+
+      if fft_fin_rout(0) = '1' then
+        usr_finished <= '1';
+      end if;
+
+      
+    end if;
+  end process;
+
+
+end Behavioral;
+

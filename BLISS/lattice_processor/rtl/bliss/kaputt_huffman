@@ -1,0 +1,285 @@
+---------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    20:16:36 08/06/2014 
+-- Design Name: 
+-- Module Name:    bliss_sign_huffman - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+use work.lattice_processor.all;
+use work.lyu512_pkg.all;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity bliss_sign_huffman is
+  generic (
+    --Change to switch paramter set
+    PARAMETER_SET : integer := 1;
+
+    --Change to tune implementation
+    KECCAK_SLICES : integer := 16;
+    CORES         : integer := 2;
+
+    --No effect, do not change
+    HASH_WIDTH : integer := 64;
+
+    N_ELEMENTS : integer  := 512;
+    ZETA       : unsigned := to_unsigned(6145, 13);
+    PRIME_P    : unsigned := to_unsigned(12289, 14)
+    );
+  port (
+
+    clk : in std_logic;
+
+    -- Control bits/signals
+    ready : out std_logic;
+    sign  : in  std_logic;
+
+    ready_message    : out std_logic := '0';
+    message_finished : in  std_logic := '0';
+
+    stop_engine     : in  std_logic;
+    engine_stoped   : out std_logic;
+    load_public_key : in  std_logic;
+
+    signature_ready   : out std_logic := '0';
+    signature_valid   : out std_logic := '0';
+    signature_invalid : out std_logic := '0';
+
+    message_din   : in std_logic_vector(HASH_WIDTH-1 downto 0) := (others => '0');
+    message_valid : in std_logic                               := '0';
+
+    --Access to the key port (to change the secret key). Write only
+    s1_addr  : in std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+    s1_in    : in std_logic_vector(get_bliss_s1_length(PARAMETER_SET)-1 downto 0)    := (others => '0');
+    s1_wr_en :    std_logic                                                          := '0';
+
+    s2_addr  : in std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+    s2_in    : in std_logic_vector(get_bliss_s2_length(PARAMETER_SET)-1 downto 0)    := (others => '0');
+    s2_wr_en :    std_logic                                                          := '0';
+
+    --Read out of different public key
+    public_key_addr : out std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+    public_key_data : in  std_logic_vector(PRIME_P'length-1 downto 0)                        := (others => '0');
+
+    final_c_pos       : out std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+    final_c_pos_valid : out std_logic                                                          := '0';
+
+    --Outputs the encoded message
+    code_V_TDATA  : out std_logic_vector (31 downto 0);
+    code_V_TVALID : out std_logic;
+    code_V_TREADY : in  std_logic
+
+    );
+
+end bliss_sign_huffman;
+
+architecture Behavioral of bliss_sign_huffman is
+  
+  signal ap_rst        : std_logic := '1';
+  signal ap_start      : std_logic := '0';
+  signal ap_done       : std_logic := '0';
+  signal ap_idle       : std_logic := '0';
+  signal ap_ready      : std_logic := '0';
+  signal z1_V_V_TDATA  : std_logic_vector (15 downto 0);
+  signal z1_V_V_TVALID : std_logic := '0';
+  signal z1_V_V_TREADY : std_logic := '0';
+  signal z2_V_V_TDATA  : std_logic_vector (7 downto 0);
+  signal z2_V_V_TVALID : std_logic := '0';
+  signal z2_V_V_TREADY : std_logic := '0';
+
+  signal ap_return : std_logic_vector (0 downto 0);
+
+  component z1_fifo
+    port (
+      s_aclk        : in  std_logic;
+      s_aresetn     : in  std_logic;
+      s_axis_tvalid : in  std_logic;
+      s_axis_tready : out std_logic;
+      s_axis_tdata  : in  std_logic_vector(15 downto 0);
+      m_axis_tvalid : out std_logic;
+      m_axis_tready : in  std_logic;
+      m_axis_tdata  : out std_logic_vector(15 downto 0)
+      );
+  end component;
+
+  component z2_fifo
+    port (
+      s_aclk        : in  std_logic;
+      s_aresetn     : in  std_logic;
+      s_axis_tvalid : in  std_logic;
+      s_axis_tready : out std_logic;
+      s_axis_tdata  : in  std_logic_vector(7 downto 0);
+      m_axis_tvalid : out std_logic;
+      m_axis_tready : in  std_logic;
+      m_axis_tdata  : out std_logic_vector(7 downto 0)
+      );
+  end component;
+
+  signal s_aresetn     : std_logic := '1';
+  signal s_axis_tvalid : std_logic := '0';
+  signal s_axis_tready : std_logic := '0';
+  signal s_axis_tdata  : std_logic_vector(15 downto 0);
+
+  signal s2_axis_tvalid : std_logic := '0';
+  signal s2_axis_tready : std_logic := '0';
+  signal s2_axis_tdata  : std_logic_vector(7 downto 0);
+
+  signal z1_final          : std_logic_vector(PRIME_P'length-1 downto 0)                        := (others => '0');
+  signal z1_final_addr     : std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+  signal z1_final_addr_reg : std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+
+  signal z1_final_valid : std_logic := '0';
+
+  --Final ports
+  signal z2_final       : std_logic_vector(get_bliss_p_length(PARAMETER_SET)-1 downto 0)     := (others => '0');
+  signal z2_final_addr  : std_logic_vector(integer(ceil(log2(real(N_ELEMENTS))))-1 downto 0) := (others => '0');
+  signal z2_final_valid : std_logic                                                          := '0';
+
+  signal cnt : integer := 0;
+ signal shift_reg : std_logic_vector(20 downto 0);
+  
+begin
+
+
+  process(clk)
+  begin  -- process
+    if rising_edge(clk) then
+
+      if cnt < 15 then
+        cnt <=  cnt+1;
+        s_aresetn <= '0';
+      else
+        ap_rst    <= '0';
+        s_aresetn <= '1';
+      end if;
+
+      shift_reg <= shift_reg(shift_reg'length-2 downto 0) & ap_done;
+
+      if shift_reg(shift_reg'length-1)='1' then
+        ap_rst <= '1';
+        s_aresetn <= '0';
+      end if;
+
+      z1_final_addr_reg <= z1_final_addr;
+      ap_start          <= '0';
+      if unsigned(z1_final_addr_reg) = 0 and unsigned(z1_final_addr) = 1 then
+        ap_start <= '1';
+      end if;
+    end if;
+  end process;
+
+
+  huffman_encoder_2 : entity work.huffman_encoder
+    port map (
+      ap_clk        => clk,
+      ap_rst        => ap_rst,
+      ap_start      => ap_start,
+      ap_done       => ap_done,
+      ap_idle       => ap_idle,
+      ap_ready      => ap_ready,
+      z1_V_V_TDATA  => z1_V_V_TDATA,
+      z1_V_V_TVALID => z1_V_V_TVALID,
+      z1_V_V_TREADY => z1_V_V_TREADY,
+      z2_V_V_TDATA  => z2_V_V_TDATA,
+      z2_V_V_TVALID => z2_V_V_TVALID,
+      z2_V_V_TREADY => z2_V_V_TREADY,
+      code_V_TDATA  => code_V_TDATA,
+      code_V_TVALID => code_V_TVALID,
+      code_V_TREADY => code_V_TREADY,
+      ap_return     => ap_return
+      );
+
+
+  s_axis_tvalid <= z1_final_valid;
+  s_axis_tdata  <= std_logic_vector(resize(signed(z1_final), s_axis_tdata'length));
+  z1_fifo_1 : z1_fifo
+    port map (
+      s_aclk        => clk,
+      s_aresetn     => s_aresetn,
+      s_axis_tvalid => s_axis_tvalid,
+      s_axis_tready => s_axis_tready,
+      s_axis_tdata  => s_axis_tdata,
+      m_axis_tvalid => z1_V_V_TVALID,
+      m_axis_tready => z1_V_V_TREADY,
+      m_axis_tdata  => z1_V_V_TDATA
+      );
+
+  s2_axis_tvalid <= z2_final_valid;
+  s2_axis_tdata  <= std_logic_vector(resize(signed(z2_final), s2_axis_tdata'length));
+  z2_fifo_1 : z2_fifo
+    port map (
+      s_aclk        => clk,
+      s_aresetn     => s_aresetn,
+      s_axis_tvalid => s2_axis_tvalid,
+      s_axis_tready => s2_axis_tready,
+      s_axis_tdata  => s2_axis_tdata,
+      m_axis_tvalid => z2_V_V_TVALID,
+      m_axis_tready => z2_V_V_TREADY,
+      m_axis_tdata  => z2_V_V_TDATA
+      );
+
+  bliss_sign_top_1 : entity work.bliss_sign_top
+    generic map (
+      PARAMETER_SET => PARAMETER_SET,
+      KECCAK_SLICES => KECCAK_SLICES,
+      CORES         => CORES,
+      PRIME_P       => PRIME_P ,
+      ZETA          => ZETA
+      )
+    port map (
+      clk               => clk,
+      ready             => ready,
+      sign              => sign,
+      ready_message     => ready_message,
+      message_finished  => message_finished,
+      stop_engine       => stop_engine,
+      engine_stoped     => engine_stoped,
+      load_public_key   => load_public_key,
+      signature_ready   => signature_ready,
+      signature_valid   => signature_valid,
+      signature_invalid => signature_invalid,
+      message_din       => message_din,
+      message_valid     => message_valid,
+      s1_addr           => s1_addr,
+      s1_in             => s1_in,
+      s1_wr_en          => s1_wr_en,
+      s2_addr           => s2_addr,
+      s2_in             => s2_in,
+      s2_wr_en          => s2_wr_en,
+      public_key_addr   => public_key_addr,
+      public_key_data   => public_key_data,
+      final_c_pos       => final_c_pos,
+      final_c_pos_valid => final_c_pos_valid,
+      z1_final          => z1_final,
+      z1_final_addr     => z1_final_addr,
+      z1_final_valid    => z1_final_valid,
+      z2_final          => z2_final,
+      z2_final_addr     => z2_final_addr,
+      z2_final_valid    => z2_final_valid
+      );
+
+end Behavioral;
+

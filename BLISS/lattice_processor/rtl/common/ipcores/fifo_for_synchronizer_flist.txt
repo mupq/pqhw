@@ -1,0 +1,14 @@
+# Output products list for <fifo_for_synchronizer>
+_xmsgs\pn_parser.xmsgs
+fifo_for_synchronizer.asy
+fifo_for_synchronizer.gise
+fifo_for_synchronizer.ngc
+fifo_for_synchronizer.sym
+fifo_for_synchronizer.vhd
+fifo_for_synchronizer.vho
+fifo_for_synchronizer.xco
+fifo_for_synchronizer.xise
+fifo_for_synchronizer_flist.txt
+fifo_for_synchronizer_xmdf.tcl
+fifo_generator_readme.txt
+fifo_generator_ug175.pdf

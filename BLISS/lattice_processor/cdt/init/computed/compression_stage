@@ -1,0 +1,89 @@
+N = 512
+
+A signature is of the form (z1 , z2t , c):
+
+---------------- Coding / Decoding c
+c is encoded on its own as a vector (i_1, ... i_kappa) i_j \in[0...512] are the indexes 
+of the non-zero coefficient of c. (kappa = 23,23,30,39 for bliss-1,2,3,4).
+
+This requires kappa*9 bits.
+
+----------------
+Some value (expected about 3% of generated signatures) will be rejected at the encode step
+(the value to be encoded might not appear in the table.)
+
+To encode z1 z2t (z2t is already z2 with dropped bits):
+
+Split (z1,z2) into n/2 blocks of the form :
+    b[i] = (z1[2*i],z1[2*i+1],z2t[2*i],z2t[2*i+1])
+
+--- We now focus on a single block b[i] = (z1,z1',z2,z2')
+
+--- Splitting High/Low/Sign
+
+each component from z1 (same for z1') is then decomposed as a triple "higher_order bits" hz1,
+ "lower_order bits" lz1, and "sign" sz1.
+
+z1 = sz1 * hz1 * B + lz1 where B = 2^z1_compress_index and lz1 \in [-B/2 ... B/2-1] 
+sz1 \in {-1,0,1} (note that sz1 is irrelevant when hz1 = 0, in which case we should set sz1=0)
+
+The component from z2 already jhave lower bits drop so just a pair 
+z2 = sz2 * hz2 (same comment applies for the sign sz2)
+
+--- Encoding High
+
+Use the encoding table to encode e = encode(hz1, hz1', hz2 ,hz2')
+
+---- Encoding Signs
+
+encode the 4 signs as a bit string of variable length <=4:
+signs = f(sz1) | f(sz1') | f(sz2) | f(sz2')
+where f(-1) = '1', f(1)='0' and f(0)='' (empty string when the sign is irrelevant)
+
+---- Encoding the whole
+
+encode the whole block as the concatenation :
+e | lz1 | hz1' | signs
+
+Note that lz1 and lz1' are \in [-B/2 ... B/2-1] and therefore require each exactly
+z1_compress_index bits via the trivial encoding of signed integers :
+
+binary(x) if for x \in   [0 ... B/2 -1]
+binary(x+B) if for x \in [- B/2 ... -1]
+
+(In particular :
+encoding of 0 = 000...0; encoding of B/2-1 = 011...1
+encoding of -B/2 = 100...0; encoding of -1 = 111...1)
+
+---------------- To decode b[i]
+Assume we know the starting position of block b[i] (trivial for i=0)
+
+first use the decoding table to find the shortest prefix e that appears in the table.
+
+This is enough to determine all the rest, that is where the string lz1 | hz1' starts, and since
+this strings as a fixed length 2*B, when can determine where the string signs starts, but also its length.
+Also because e is enough to know which corrdinates of (hz1,hz1',hz2,hz2') are non null, when can determine
+which bits of the sustring signs correspond to each coordinate of (sz1,sz1',sz2,sz2').
+
+Last because we where able to determine the length of signs, we know exactly where the next block b[i+1] starts.
+
+
+++++++++++++++++++ Why all those shananigans ?! 
+
+To get small huffman table we want not to many values to encodes : Therefore we focus on the highter
+order bits, since the lower order bits are almost uniform and there isn't much to be compressed there.
+Because the distribution are symmetric, we encode only absolute values, and deal with the signs
+otherwise; making the table smaller. We group those value by pack of 4 so to decrease the overhead 
+between theoretical entropy and actual efficiency of Huffman encoding.
+
+Value range for the encoding table :
+
+Bliss 1: [0..3]*[0..3]*[0..1]*[0..1] (size 4*4*2*2 =64)
+Bliss 2: [0..3]*[0..3]*[0..1]*[0..1] (size 4*4*2*2 =64)
+Bliss 3: [0..4]*[0..4]*[0..2]*[0..2] (size 5*5*3*3 =225)
+Bliss 4: [0..2]*[0..2]*[0..4]*[0..4] (size 3*3*5*5 =225)
+
+
+
+
+

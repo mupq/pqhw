@@ -1,0 +1,14 @@
+# Output products list for <sync_gen_fifo>
+_xmsgs\pn_parser.xmsgs
+fifo_generator_readme.txt
+fifo_generator_ug175.pdf
+sync_gen_fifo.asy
+sync_gen_fifo.gise
+sync_gen_fifo.ngc
+sync_gen_fifo.sym
+sync_gen_fifo.vhd
+sync_gen_fifo.vho
+sync_gen_fifo.xco
+sync_gen_fifo.xise
+sync_gen_fifo_flist.txt
+sync_gen_fifo_xmdf.tcl

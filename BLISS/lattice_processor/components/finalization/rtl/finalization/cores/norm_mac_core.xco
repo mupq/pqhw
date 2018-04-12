@@ -1,0 +1,61 @@
+##############################################################
+#
+# Xilinx Core Generator version 14.7
+# Date: Tue Aug 12 14:53:48 2014
+#
+##############################################################
+#
+#  This file contains the customisation parameters for a
+#  Xilinx CORE Generator IP GUI. It is strongly recommended
+#  that you do not manually alter this file as it may cause
+#  unexpected and unsupported behavior.
+#
+##############################################################
+#
+#  Generated from component: xilinx.com:ip:xbip_multaccum:2.0
+#
+##############################################################
+#
+# BEGIN Project Options
+SET addpads = false
+SET asysymbol = true
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = false
+SET designentry = VHDL
+SET device = xc6slx25
+SET devicefamily = spartan6
+SET flowvendor = Other
+SET formalverification = false
+SET foundationsym = false
+SET implementationfiletype = Ngc
+SET package = csg324
+SET removerpms = false
+SET simulationfiles = Behavioral
+SET speedgrade = -3
+SET verilogsim = false
+SET vhdlsim = true
+# END Project Options
+# BEGIN Select
+SELECT Multiply_Accumulator xilinx.com:ip:xbip_multaccum:2.0
+# END Select
+# BEGIN Parameters
+CSET a_input_type=Signed
+CSET a_input_width=16
+CSET accum_mode=Add
+CSET accum_width=48
+CSET b_input_type=Signed
+CSET b_input_width=16
+CSET bypass=false
+CSET bypass_sense=Active_High
+CSET component_name=norm_mac_core
+CSET implementation=DSP48
+CSET latency=1
+CSET latency_configuration=Manual
+CSET output_width=48
+CSET sync_ce_priority=Sync_Overrides_CE
+# END Parameters
+# BEGIN Extra information
+MISC pkg_timestamp=2013-07-22T10:40:50Z
+# END Extra information
+GENERATE
+# CRC: 4d716024

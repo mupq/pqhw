@@ -1,0 +1,17 @@
+# Output products list for <norm_mac_core>
+_xmsgs\pn_parser.xmsgs
+core_resources.txt
+gui_latency.txt
+norm_mac_core.asy
+norm_mac_core.gise
+norm_mac_core.ngc
+norm_mac_core.sym
+norm_mac_core.vhd
+norm_mac_core.vho
+norm_mac_core.xco
+norm_mac_core.xise
+norm_mac_core\doc\xbip_multaccum_ds716.pdf
+norm_mac_core\doc\xbip_multaccum_v2_0_readme.txt
+norm_mac_core\doc\xbip_multaccum_v2_0_vinfo.html
+norm_mac_core_flist.txt
+norm_mac_core_xmdf.tcl
