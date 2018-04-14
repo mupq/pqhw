@@ -25,6 +25,14 @@ Currently **pqhw** contains implementations of the following post-quantum scheme
 | ------ | ---------- | ------------- | ----- | ----- | ----- | ----- | ----------|
 | NewHope-1024 | server | 5,142 |  4,452 | 4 | 2 | 125 | 171,124 |
 | NewHope-1024 | client | 4,498 |  4,635 | 4 | 2 | 117 | 179,292 |
+| BLISS-I	| SignHuff_CDT | 7,193 | 6,420 | 5.5 | 5 | 139 | 15,864 |
+| BLISS-I 	| Sign_BER		| 8,313 | 7,932 | 5 | 7 | 142 | 15,840 |
+| BLISS-III	| Sign_CDT		| 6,397 | 6,179 | 6.5 | 5 | 133 | 27,547 |
+| BLISS-IV 	| Sign_CDT		| 6,438 | 6,198 | 7 | 5 | 135 | 47,528 |
+| BLISS-I	| VerifyHuff | 5,065 | 4,312 | 4 | 3 | 166 | 16,346 |
+| BLISS-I	| Verify | 4,366 | 3,887 | 3 | 3 | 172 | 9,607 |
+| BLISS-III	| Verify | 4,298 | 3,867 | 3 | 3 | 172 | 9,628 |
+| BLISS-IV	| Verify | 4,356 | 3,886 | 3 | 3 | 171 | 9,658 |
 
 ## License
 * The License for NewHope can be found in NewHope/license.rtf
