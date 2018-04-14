@@ -21,6 +21,10 @@ Currently **pqhw** contains implementations of the following post-quantum scheme
 * To see BLISS in action run the bliss_sign_then_verify_tb.vhd testbench. Edit the generics to simulate different parameter sets. Some fixed paths might not work (relative is also not an option). Please fix them when you see the error messages. 
 
 ## Benchmarks
+| scheme | implementation | LUT | FF | BRAM | DSP | MHz | Cycles
+| ------ | ---------- | ------------- | ----- | ----- | ----- | ----- | -----------|
+| NewHope-1024 | server | 5,142 |  4,452 | 4 | 2 | 125 | 171,124 |
+| NewHope-1024 | client | 4,498 |  4,635 | 4 | 2 | 117 | 179,292 |
 
 ## License
 * The License for NewHope can be found in NewHope/license.rtf
