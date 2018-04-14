@@ -22,7 +22,7 @@ Currently **pqhw** contains implementations of the following post-quantum scheme
 
 ## Benchmarks
 | scheme | implementation | LUT | FF | BRAM | DSP | MHz | Cycles
-| ------ | ---------- | ------------- | ----- | ----- | ----- | ----- | -----------|
+| ------ | ---------- | ------------- | ----- | ----- | ----- | ----- | ----------|
 | NewHope-1024 | server | 5,142 |  4,452 | 4 | 2 | 125 | 171,124 |
 | NewHope-1024 | client | 4,498 |  4,635 | 4 | 2 | 117 | 179,292 |
 
